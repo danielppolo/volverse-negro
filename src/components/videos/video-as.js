@@ -1,9 +1,10 @@
 import React from 'react'
+import Video from '../common/video'
 
 
-function VideoAS({ props }) {
+function VideoAS() {
   return (
-    <video src="https://res.cloudinary.com/teatroojo/video/upload/v1602310377/volverse_negro/video/volversenegro_18.compressed_1.compressed_bsggpj.mp4" />
+    <Video src="https://res.cloudinary.com/teatroojo/video/upload/v1602310377/volverse_negro/video/volversenegro_18.compressed_1.compressed_bsggpj.mp4" />
   )
 }
 
