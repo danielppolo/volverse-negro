@@ -3,7 +3,7 @@ import {
 } from 'react'
 
 const useAmbientSound = (secondary) => {
-  const [track] = useState(new Audio('https://res.cloudinary.com/teatroojo/video/upload/v1602274769/volverse_negro/audio/Paisaje-Sonoro_Automata_Enrique-Mendoza_MASTER_bkqzw4.mp3'))
+  const [track] = useState((typeof Audio !== 'undefined') && new Audio('https://res.cloudinary.com/teatroojo/video/upload/v1602274769/volverse_negro/audio/Paisaje-Sonoro_Automata_Enrique-Mendoza_MASTER_bkqzw4.mp3'))
   const [interacted, setInteracted] = useState(false)
 
   useEffect(() => {
@@ -15,15 +15,17 @@ const useAmbientSound = (secondary) => {
   }, [])
 
   useEffect(() => {
-    if (interacted) {
+    if (interacted && track) {
       track.loop = true
       track.volume = 1
-      // track.play()
+      track.play()
     }
   }, [interacted])
 
   useEffect(() => {
-    track.volume = secondary ? 0.5 : 1
+    if (track) {
+      track.volume = secondary ? 0.2 : 1
+    }
   }, [secondary])
 }
 
