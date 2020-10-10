@@ -1,18 +1,17 @@
 import React, { useEffect, useState, useMemo } from 'react'
-import Figure from '../components/figure'
+import Figure from '../components/common/figure'
 import sources from '../data/figures'
 
 const useFigures = () => {
-  const [figures, setFigures] = useState([])
-  const getFigures = () => figures
-
-
   useEffect(() => {
-    document.addEventListener('click', () => {
-      setFigures([...getFigures(), <Figure src={sources[Math.floor(Math.random() * sources.length)]} key={Math.random()} />])
+    document.addEventListener('click', (event) => {
+      const figures = Array.from(document.querySelectorAll('.Figure'))
+      const selected = figures[Math.floor(Math.random() * sources.length)]
+      selected.classList.toggle('active')
+      selected.style.left = `${event.x}px`
+      selected.style.top = `${event.y}px`
     })
   }, [])
-  return figures
 }
 
 export default useFigures

@@ -1,26 +1,94 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFF2E1;
-  color: #383532;
-  font-family: georgia, serif;
+	--color-bg: #FFF2E1;
+  --color-text: #383532;
+	--color-link: #000;
+	--color-link-hover: #040203;
+	--color-content: #040203;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'EB Garamond', serif;
   font-weight: normal;
+  font-size: 32px;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  	/* Cursor styles */
+	--cursor-stroke: #c3654e;
+	--cursor-fill: none;
+	--cursor-stroke-width: 1px;
 }
-article,
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.cursor {
+	display: none;
+}
+
+@media (any-pointer: fine) {
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+		opacity: 0;
+	}
+	.cursor__inner {
+		fill: var(--cursor-fill);
+		stroke: var(--cursor-stroke);
+		stroke-width: var(--cursor-stroke-width);
+	}
+}
+
+.Loading {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+@keyframes fade {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+.Loading.transition {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+.Loading.hide {
+  display: none;
+}
+/* article,
 aside,
 details,
 figcaption,
@@ -82,8 +150,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -398,7 +464,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  line-height: 1.2;
 }
 pre {
   margin-left: 0;
@@ -595,4 +661,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */
