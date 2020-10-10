@@ -31,7 +31,7 @@ module.exports = {
     semi: [2, 'never'],
     quotes: [2, 'single'],
     'jsx-quotes': [2, 'prefer-double'],
-    'no-restricted-imports': [2, { patterns: ['../*'] }],
+    'no-restricted-imports': [0, { patterns: ['../*'] }],
     'jsx-a11y/no-autofocus': [0, {
       ignoreNonDOM: true,
     }],
