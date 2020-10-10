@@ -222,23 +222,42 @@ const IndexPage = () => {
               <Fragment>
                 <FragmentAA />
                 <FragmentAB />
-                <FragmentAC />
-                <FragmentAD />
-                <FragmentAE />
               </Fragment>
             </Column>
             <Column>
               <VideoAA onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAB onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Refineria pos="1" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
+                <FragmentAC />
+                <FragmentAD />
+              </Fragment>
+            </Column>
+            <Column>
               <VideoAC onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Nino pos="2" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
+                <FragmentAE />
+              </Fragment>
+            </Column>
+            <Column>
               <VideoAD onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
-          <Refineria pos="1" />
-          <Nino pos="2" />
-          <Maquinaria pos="3" />
-          <Parvadas pos="4" />
         </Container>
+        <Maquinaria pos="3" />
         <Container>
           <Row>
             <Column>
@@ -248,10 +267,35 @@ const IndexPage = () => {
                 <FragmentAH />
                 <FragmentAI />
                 <FragmentAJ />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAE onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Parvadas pos="4" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentAL />
                 <FragmentAM />
                 <FragmentAN />
                 <FragmentAQ />
+                <FragmentAR />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAF onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <NinoTurbina pos="5" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentAR />
                 <FragmentAS />
                 <FragmentAT />
@@ -262,17 +306,12 @@ const IndexPage = () => {
               </Fragment>
             </Column>
             <Column>
-              <VideoAE onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAF onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAG onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAH onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
-        <NinoTurbina pos="5" />
         <NinoPanal pos="6" />
-        <Mano pos="7" />
-
         <Container>
           <Row>
             <Column>
@@ -281,10 +320,35 @@ const IndexPage = () => {
                 <FragmentBB />
                 <FragmentBC />
                 <FragmentBD />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAI onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Mano pos="7" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentBE />
                 <FragmentBF />
                 <FragmentBG />
                 <FragmentBH />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Cupulas pos="8" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentBI />
                 <FragmentBJ />
                 <FragmentBK />
@@ -292,17 +356,11 @@ const IndexPage = () => {
               </Fragment>
             </Column>
             <Column>
-              <VideoAI onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
-        <Cupulas pos="8" />
         <Palomas pos="9" />
-        <Interior pos="10" />
-        <Cerro pos="11" />
         <Container>
           <Row>
             <Column>
@@ -311,10 +369,35 @@ const IndexPage = () => {
                 <FragmentBP />
                 <FragmentBQ />
                 <FragmentBR />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Interior pos="10" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentBS />
                 <FragmentBT />
                 <FragmentBU />
                 <FragmentBV />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              <VideoAO onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Cerro pos="11" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentBW />
                 <FragmentBX />
                 <FragmentBY />
@@ -322,16 +405,11 @@ const IndexPage = () => {
               </Fragment>
             </Column>
             <Column>
-              <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAO onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAP onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
         <Cera pos="12" />
-        <NinoAbeja pos="13" />
-        <Panal pos="14" />
         <Container>
           <Row>
             <Column>
@@ -340,30 +418,60 @@ const IndexPage = () => {
                 <FragmentCB />
                 <FragmentCC />
                 <FragmentCD />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAQ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <NinoAbeja pos="13" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentCE />
                 <FragmentCF />
                 <FragmentCG />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAR onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Panal pos="14" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentCH />
                 <FragmentCI />
                 <FragmentCJ />
                 <FragmentCK />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAS onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <FuegoRefineria pos="15" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentCL />
                 <FragmentCM />
                 <FragmentCN />
               </Fragment>
             </Column>
             <Column>
-              <VideoAQ onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAR onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAS onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAT onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
-        <FuegoRefineria pos="15" />
         <Capsulas pos="16" />
-        <Aereo pos="17" />
-        <Campanario pos="18" />
         <Container>
           <Row>
             <Column>
@@ -372,26 +480,46 @@ const IndexPage = () => {
                 <FragmentCP />
                 <FragmentCQ />
                 <FragmentCR />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAU onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Aereo pos="17" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentCS />
                 <FragmentCT />
                 <FragmentCU />
                 <FragmentCV />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Campanario pos="18" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentCW />
                 <FragmentCX />
                 <FragmentCY />
               </Fragment>
             </Column>
             <Column>
-              <VideoAU onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoAX onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
         <Tortolas pos="19" />
-        <Bichos pos="20" />
-        <NinoCielo pos="21" />
         <Container>
           <Row>
             <Column>
@@ -399,28 +527,59 @@ const IndexPage = () => {
                 <FragmentCZ />
                 <FragmentDA />
                 <FragmentDB />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Bichos pos="20" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentDC />
                 <FragmentDD />
                 <FragmentDE />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <NinoCielo pos="21" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentDG />
                 <FragmentDH />
                 <FragmentDI />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Palmeras pos="22" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentDJ />
                 <FragmentDK />
                 <FragmentDL />
               </Fragment>
             </Column>
             <Column>
-              <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoBB onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
-        <Palmeras pos="22" />
         <NinoCornisa pos="23" />
-        <PajarosCEARG pos="24" />
         <Container>
           <Row>
             <Column>
@@ -428,31 +587,61 @@ const IndexPage = () => {
                 <FragmentDM />
                 <FragmentDN />
                 <FragmentDO />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <PajarosCEARG pos="24" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentDP />
                 <FragmentDQ />
                 <FragmentDR />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <Bayas pos="25" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentDS />
                 <FragmentDT />
                 <FragmentDU />
+              </Fragment>
+            </Column>
+            <Column>
+              <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            </Column>
+          </Row>
+        </Container>
+        <NinoPanalito pos="26" />
+        <Container>
+          <Row>
+            <Column>
+              <Fragment>
                 <FragmentDV />
                 <FragmentDW />
                 <FragmentDX />
               </Fragment>
             </Column>
             <Column>
-              <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoBF onPlay={handleVideoPlay} onPause={handleVideoPause} />
               <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
             </Column>
           </Row>
         </Container>
-        <Bayas pos="25" />
-        <NinoPanalito pos="26" />
         <PajarosCupula pos="27" />
       </div>
-      <div />
       <Figures />
       <Cursor />
     </Layout>

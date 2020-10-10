@@ -5,6 +5,12 @@ const CollectionStyled = styled.div`
   display: flex;
   overflow-x: scroll;
   width: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  > img {
+    margin-right: 50px;
+  }
 `
 function Collection({ children }) {
   return (

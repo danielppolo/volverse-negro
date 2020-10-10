@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const ContainerStyled = styled.div`
   max-width: 90%;
-  margin: 0 auto;
+  margin: 120px auto;
 `
 
 function Container({ children }) {

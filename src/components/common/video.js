@@ -19,18 +19,18 @@ function Video({ src, onPlay, onPause }) {
     onPause()
   }
   return (
-    // <video
-    //   src={src}
-    //   preload="metadata"
-    //   ref={video}
-    //   onMouseEnter={handleMouseEnter}
-    //   onMouseLeave={handleMouseLeave}
-    // />
-    <Placeholder
-      className="video"
-      onMouseEnter={() => { onPlay() }}
-      onMouseLeave={() => { onPause() }}
+    <video
+      src={src}
+      preload="metadata"
+      ref={video}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     />
+    // <Placeholder
+    //   className="video"
+    //   onMouseEnter={() => { onPlay() }}
+    //   onMouseLeave={() => { onPause() }}
+    // />
   )
 }
 
