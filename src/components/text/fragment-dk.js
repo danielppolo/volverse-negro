@@ -1,24 +1,37 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentDK() {
   return (
-    <p>
-Espejos humeantes:
-
-• Tezcatlipoca
-• Mancebos
-• Algoritmos
-
-• Ovejas
-• Variables
-• Tenochtitlan
-• Epifanías
-• Balidos
-• Negromex
-• Cielos oscuros
-• Hule
-    </p>
+    <Fragment pos="kkkk">
+      <p>
+      Espejos humeantes:
+        <br />
+    • Tezcatlipoca
+        <br />
+    • Mancebos
+        <br />
+    • Algoritmos
+        <br />
+    • Ovejas
+        <br />
+    • Variables
+        <br />
+    • Tenochtitlan
+        <br />
+    • Epifanías
+        <br />
+    • Balidos
+        <br />
+    • Negromex
+        <br />
+    • Cielos oscuros
+        <br />
+    • Hule
+        <br />
+      </p>
+    </Fragment>
   )
 }
 

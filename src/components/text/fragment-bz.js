@@ -1,12 +1,15 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBZ() {
   return (
-    <p>
+    <Fragment pos="zz">
+      <p>
 A los sacerdotes aztecas los pintaban de negro al amanecer. Todo el cuerpo en el
 templo, unos niños.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

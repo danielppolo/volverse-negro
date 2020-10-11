@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentCZ() {
   return (
-    <p>
+    <Fragment pos="zzz">
+      <p>
 Mire, éste es el aire de París
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

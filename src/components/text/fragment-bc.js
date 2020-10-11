@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBC() {
   return (
-    <p>
+    <Fragment pos="cc">
+      <p>
 Pequeño oratorio a los desiertos.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

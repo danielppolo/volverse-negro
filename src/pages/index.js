@@ -30,7 +30,7 @@ import FragmentAT from '../components/text/fragment-at'
 import FragmentAV from '../components/text/fragment-av'
 import FragmentAW from '../components/text/fragment-aw'
 import FragmentAX from '../components/text/fragment-ax'
-// import FragmentAY from '../components/text/fragment-ay'
+import FragmentAY from '../components/text/fragment-ay'
 import FragmentAZ from '../components/text/fragment-az'
 import FragmentBA from '../components/text/fragment-ba'
 import FragmentBB from '../components/text/fragment-bb'
@@ -188,16 +188,24 @@ import ZoomA from '../components/zooms/zoom-a'
 import ZoomB from '../components/zooms/zoom-b'
 import ZoomC from '../components/zooms/zoom-c'
 import ZoomD from '../components/zooms/zoom-d'
+import useStreaming from '../hooks/use-streaming'
 
 const IndexPage = () => {
   const [ready, setReady] = useState(false)
   const [video, setVideo] = useState(true)
   const loaded = useMediaLoaded()
+  useStreaming('CWu29PRCUvQ', [
+    'streaming-1',
+    'streaming-2',
+    'streaming-3',
+    'streaming-4',
+    'streaming-5',
+  ], ready)
   const {
     current, next, previous, playback,
   } = useTracks()
-  useAmbientSound((video))
-  useFigures(ready)
+  useAmbientSound((video || current))
+  const stamp = useFigures(ready)
 
   const handleVideoPlay = useCallback(
     () => { setVideo(true) },
@@ -218,13 +226,10 @@ const IndexPage = () => {
         />
         <div>
           <Welcome />
-          <Streaming
-            videoId="CWu29PRCUvQ"
-            autoplay={ready}
-          />
+          <Streaming id="streaming-1" />
           <Intro />
           <Empty />
-          <Cartography />
+          <Cartography onClick={stamp} />
         </div>
         <div>
           <Container>
@@ -313,6 +318,7 @@ const IndexPage = () => {
                   <FragmentAV />
                   <FragmentAW />
                   <FragmentAX />
+                  <FragmentAY />
                   <FragmentAZ />
                 </Fragment>
               </Column>
@@ -323,6 +329,9 @@ const IndexPage = () => {
             </Row>
           </Container>
           <NinoPanal pos="6" />
+
+          <Streaming id="streaming-2" />
+
           <Container>
             <Row>
               <Column>
@@ -335,7 +344,6 @@ const IndexPage = () => {
               </Column>
               <Column>
                 <VideoAI onPlay={handleVideoPlay} onPause={handleVideoPause} />
-                <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -351,7 +359,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -367,7 +375,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -383,7 +391,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -399,6 +407,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
+                <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoAO onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
@@ -421,6 +430,9 @@ const IndexPage = () => {
             </Row>
           </Container>
           <Cera pos="12" />
+
+          <Streaming id="streaming-3" />
+
           <Container>
             <Row>
               <Column>
@@ -460,6 +472,7 @@ const IndexPage = () => {
                   <FragmentCI />
                   <FragmentCJ />
                   <FragmentCK />
+                  <FragmentCL />
                 </Fragment>
               </Column>
               <Column>
@@ -472,7 +485,6 @@ const IndexPage = () => {
             <Row>
               <Column>
                 <Fragment active={current === 5} onClick={() => playback(5)}>
-                  <FragmentCL />
                   <FragmentCM />
                   <FragmentCN />
                 </Fragment>
@@ -495,7 +507,6 @@ const IndexPage = () => {
               </Column>
               <Column>
                 <VideoAU onPlay={handleVideoPlay} onPause={handleVideoPause} />
-                <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -511,7 +522,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -526,11 +537,14 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAX onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
           <Tortolas pos="19" />
+
+          <Streaming id="streaming-4" />
+
           <Container>
             <Row>
               <Column>
@@ -538,10 +552,12 @@ const IndexPage = () => {
                   <FragmentCZ />
                   <FragmentDA />
                   <FragmentDB />
+                  <FragmentDC />
+                  <FragmentDD />
                 </Fragment>
               </Column>
               <Column>
-                <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAX onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -550,13 +566,14 @@ const IndexPage = () => {
             <Row>
               <Column>
                 <Fragment active={current === 7} onClick={() => playback(7)}>
-                  <FragmentDC />
-                  <FragmentDD />
                   <FragmentDE />
+                  <FragmentDG />
+                  <FragmentDH />
+                  <FragmentDI />
                 </Fragment>
               </Column>
               <Column>
-                <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -565,13 +582,11 @@ const IndexPage = () => {
             <Row>
               <Column>
                 <Fragment active={current === 7} onClick={() => playback(7)}>
-                  <FragmentDG />
-                  <FragmentDH />
-                  <FragmentDI />
+                  <FragmentDJ />
                 </Fragment>
               </Column>
               <Column>
-                <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -580,13 +595,12 @@ const IndexPage = () => {
             <Row>
               <Column>
                 <Fragment active={current === 7} onClick={() => playback(7)}>
-                  <FragmentDJ />
                   <FragmentDK />
                   <FragmentDL />
                 </Fragment>
               </Column>
               <Column>
-                <VideoBB onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -601,7 +615,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBB onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -616,7 +630,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -631,7 +645,7 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -646,12 +660,15 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
+                <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoBF onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
           <PajarosCupula pos="27" />
+
+          <Streaming id="streaming-5" />
         </div>
         <Figures />
         <Cursor />

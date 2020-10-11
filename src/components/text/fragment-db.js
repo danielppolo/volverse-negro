@@ -1,11 +1,13 @@
 import React from 'react'
-
+import Fragment from '../common/fragment'
 
 function FragmentDB() {
   return (
-    <p>
-      Que Duchamo, Marcel, llevó a Nueva York, para venderlo
-    </p>
+    <Fragment pos="bbbb">
+      <p>
+      Que Duchamp, Marcel, llevó a Nueva York, para venderlo
+      </p>
+    </Fragment>
   )
 }
 

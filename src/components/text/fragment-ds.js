@@ -1,11 +1,13 @@
 import React from 'react'
-
+import Fragment from '../common/fragment'
 
 function FragmentDS() {
   return (
-    <p>
+    <Fragment pos="ssss">
+      <p>
       El negro es propiedad privada: no pasar.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

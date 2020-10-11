@@ -7,16 +7,20 @@ const MapStyled = styled(ParallaxBanner)`
   margin: 100px 0;
 `
 
-const Cartography = ({ props }) => (
+const Cartography = () => (
   <MapStyled
+    className="cartography"
     layers={[
       {
         image: 'https://res.cloudinary.com/teatroojo/image/upload/v1602304897/volverse_negro/images/cartography_ftmbdn.jpg',
         amount: 0.2,
+        props: {
+          id: 'cartography',
+        },
       },
     ]}
     style={{
-      height: '100vh',
+      height: (typeof window !== 'undefined') ? window.innerWidth : 800,
     }}
   />
 )

@@ -1,6 +1,11 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 
 const useFigures = (ready) => {
+  const stamp = useCallback(
+    event => selected,
+    [],
+  )
+
   useEffect(() => {
     const handleClick = (event) => {
       const figures = Array.from(document.querySelectorAll('.Figure.inactive'))
@@ -13,6 +18,8 @@ const useFigures = (ready) => {
       selected.style.transform = `rotate(${(Math.floor(Math.random() * 30)) * (Math.random() > 0.5 ? -1 : 1)}deg) translate(-50%, -50%)`
       selected.style.left = `${event.pageX}px`
       selected.style.top = `${event.pageY}px`
+      if (event.target.id === 'cartography') return
+
       selected.style.animationName = 'fade'
       selected.style.animationDuration = '3s'
       selected.style.animationDelay = '3s'
@@ -23,12 +30,15 @@ const useFigures = (ready) => {
     }
 
     if (ready) {
-      document.addEventListener('click', handleClick)
+      document.querySelector('main').addEventListener('click', handleClick)
     }
     return () => {
-      document.removeEventListener('click', handleClick)
+      document.querySelector('main').removeEventListener('click', handleClick)
     }
   }, [ready])
+
+
+  return stamp
 }
 
 export default useFigures

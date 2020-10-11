@@ -1,9 +1,11 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBY() {
   return (
-    <p>
+    <Fragment pos="yy">
+      <p>
       La última pintura del siglo. Después, un silencio monocromo. Los rollos del Mar
 Muerto. Interpretaciones pendientes del Torá. Un cuadro escueto y una visión solar.
 Negro sobrenegro sobrenegro sobrenegro. El blanco es el infinito que sostiene una
@@ -14,7 +16,8 @@ negrocristo, negroespaciosideral. No hables de la ausencia de color, mejor di qu
 nada se puede entender si el contraste entre las superficies comprensibles de la
 realidad y las formas inesperadas de la sorpresa. Este cuadro calla. El blanco es
 blanco/el negro es negro.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentDG() {
   return (
-    <p>
+    <Fragment pos="gggg">
+      <p>
 Estamos en septiembre y pronto llegará el otoño.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

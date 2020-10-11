@@ -1,11 +1,13 @@
 import React from 'react'
-
+import Fragment from '../common/fragment'
 
 function FragmentCH() {
   return (
-    <p>
+    <Fragment pos="hhh">
+      <p>
 Toda propiedad es privada y está circundada de muros.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 
