@@ -4,10 +4,11 @@ import React, { useEffect, useState } from 'react'
 function Streaming({ autoplay, videoId }) {
   const [player, setPlayer] = useState(null)
   useEffect(() => {
+    const width = window.innerWidth
     window.onYouTubeIframeAPIReady = () => {
       const p = new YT.Player('player', {
-        height: '390',
-        width: '640',
+        height: width ? width * 0.75 : 800,
+        width: width || '100%',
         videoId,
         events: {
           onReady: (event) => {

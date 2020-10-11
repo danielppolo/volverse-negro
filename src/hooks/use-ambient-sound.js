@@ -24,7 +24,7 @@ const useAmbientSound = (secondary) => {
 
   useEffect(() => {
     if (track) {
-      track.volume = secondary ? 0.2 : 1
+      track.volume = secondary ? 0.2 : 0.7
     }
   }, [secondary])
 }

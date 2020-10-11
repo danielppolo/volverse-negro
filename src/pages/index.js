@@ -1,6 +1,7 @@
 import React, {
   useEffect, useState, useRef, useCallback,
 } from 'react'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import '../index.css'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -167,8 +168,7 @@ import PajarosCEARG from '../components/collections/collection-w'
 import Bayas from '../components/collections/collection-x'
 import NinoPanalito from '../components/collections/collection-y'
 import PajarosCupula from '../components/collections/collection-z'
-import Date from '../components/common/date'
-import Location from '../components/common/location'
+
 import Cartography from '../components/common/cartography'
 import Intro from '../components/common/intro'
 import Loading from '../components/common/loading'
@@ -179,16 +179,26 @@ import Cursor from '../components/common/cursor'
 import Container from '../components/common/container'
 import Row from '../components/common/row'
 import Column from '../components/common/column'
+import Empty from '../components/common/empty'
 import Fragment from '../components/common/fragment'
 import useMediaLoaded from '../hooks/use-media-loaded'
+import useTracks from '../hooks/use-tracks'
+import Welcome from '../components/common/welcome'
+import ZoomA from '../components/zooms/zoom-a'
+import ZoomB from '../components/zooms/zoom-b'
+import ZoomC from '../components/zooms/zoom-c'
+import ZoomD from '../components/zooms/zoom-d'
 
 const IndexPage = () => {
   const [ready, setReady] = useState(false)
   const [video, setVideo] = useState(true)
-  const [track, setTrack] = useState(null)
-  useAmbientSound((video || track))
   const loaded = useMediaLoaded()
-  // useFigures()
+  const {
+    current, next, previous, playback,
+  } = useTracks()
+  useAmbientSound((video))
+  useFigures(ready)
+
   const handleVideoPlay = useCallback(
     () => { setVideo(true) },
     [],
@@ -199,452 +209,474 @@ const IndexPage = () => {
   )
 
   return (
-    <Layout>
-      <SEO title="Volverse negro" />
-      <Loading
-        done={loaded}
-        onClick={() => setReady(true)}
-      />
-      <div>
-        <Date />
-        <Location />
-        <Streaming
-          videoId="CWu29PRCUvQ"
-          autoplay={ready}
+    <ParallaxProvider>
+      <Layout>
+        <SEO title="Volverse negro" />
+        <Loading
+          done={loaded}
+          onClick={() => setReady(true)}
         />
-        <Intro />
-        <Cartography />
-      </div>
-      <div>
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentAA />
-                <FragmentAB />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAA onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAB onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Refineria pos="1" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentAC />
-                <FragmentAD />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAC onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Nino pos="2" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentAE />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAD onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Maquinaria pos="3" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentAF />
-                <FragmentAG />
-                <FragmentAH />
-                <FragmentAI />
-                <FragmentAJ />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAE onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Parvadas pos="4" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentAL />
-                <FragmentAM />
-                <FragmentAN />
-                <FragmentAQ />
-                <FragmentAR />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAF onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <NinoTurbina pos="5" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentAR />
-                <FragmentAS />
-                <FragmentAT />
-                <FragmentAV />
-                <FragmentAW />
-                <FragmentAX />
-                <FragmentAZ />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAG onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAH onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <NinoPanal pos="6" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentBA />
-                <FragmentBB />
-                <FragmentBC />
-                <FragmentBD />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAI onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Mano pos="7" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentBE />
-                <FragmentBF />
-                <FragmentBG />
-                <FragmentBH />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Cupulas pos="8" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentBI />
-                <FragmentBJ />
-                <FragmentBK />
-                <FragmentBL />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Palomas pos="9" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentBO />
-                <FragmentBP />
-                <FragmentBQ />
-                <FragmentBR />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Interior pos="10" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentBS />
-                <FragmentBT />
-                <FragmentBU />
-                <FragmentBV />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAO onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Cerro pos="11" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentBW />
-                <FragmentBX />
-                <FragmentBY />
-                <FragmentBZ />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAP onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Cera pos="12" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCA />
-                <FragmentCB />
-                <FragmentCC />
-                <FragmentCD />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAQ onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <NinoAbeja pos="13" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCE />
-                <FragmentCF />
-                <FragmentCG />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAR onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Panal pos="14" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCH />
-                <FragmentCI />
-                <FragmentCJ />
-                <FragmentCK />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAS onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <FuegoRefineria pos="15" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCL />
-                <FragmentCM />
-                <FragmentCN />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAT onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Capsulas pos="16" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCO />
-                <FragmentCP />
-                <FragmentCQ />
-                <FragmentCR />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAU onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Aereo pos="17" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCS />
-                <FragmentCT />
-                <FragmentCU />
-                <FragmentCV />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Campanario pos="18" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCW />
-                <FragmentCX />
-                <FragmentCY />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAX onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Tortolas pos="19" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentCZ />
-                <FragmentDA />
-                <FragmentDB />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Bichos pos="20" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDC />
-                <FragmentDD />
-                <FragmentDE />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <NinoCielo pos="21" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDG />
-                <FragmentDH />
-                <FragmentDI />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Palmeras pos="22" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDJ />
-                <FragmentDK />
-                <FragmentDL />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoBB onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <NinoCornisa pos="23" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDM />
-                <FragmentDN />
-                <FragmentDO />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <PajarosCEARG pos="24" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDP />
-                <FragmentDQ />
-                <FragmentDR />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <Bayas pos="25" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDS />
-                <FragmentDT />
-                <FragmentDU />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <NinoPanalito pos="26" />
-        <Container>
-          <Row>
-            <Column>
-              <Fragment>
-                <FragmentDV />
-                <FragmentDW />
-                <FragmentDX />
-              </Fragment>
-            </Column>
-            <Column>
-              <VideoBF onPlay={handleVideoPlay} onPause={handleVideoPause} />
-              <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
-            </Column>
-          </Row>
-        </Container>
-        <PajarosCupula pos="27" />
-      </div>
-      <Figures />
-      <Cursor />
-    </Layout>
+        <div>
+          <Welcome />
+          <Streaming
+            videoId="CWu29PRCUvQ"
+            autoplay={ready}
+          />
+          <Intro />
+          <Empty />
+          <Cartography />
+        </div>
+        <div>
+          <Container>
+            <Row>
+              <Column width={40}>
+                <Fragment active={current === 1} onClick={() => playback(1)}>
+                  <FragmentAA />
+                  <FragmentAB />
+                </Fragment>
+              </Column>
+              <Column grow>
+                <VideoAA onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAB onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Refineria pos="1" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 1} onClick={() => playback(1)}>
+                  <FragmentAC />
+                  <FragmentAD />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAC onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Nino pos="2" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 1} onClick={() => playback(1)}>
+                  <FragmentAE />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAD onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Maquinaria pos="3" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 2} onClick={() => playback(2)}>
+                  <FragmentAF />
+                  <FragmentAG />
+                  <FragmentAH />
+                  <FragmentAI />
+                  <FragmentAJ />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAE onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Parvadas pos="4" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 2} onClick={() => playback(2)}>
+                  <FragmentAL />
+                  <FragmentAM />
+                  <FragmentAN />
+                  <FragmentAQ />
+                  <FragmentAR />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAF onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <NinoTurbina pos="5" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 2} onClick={() => playback(2)}>
+                  <FragmentAR />
+                  <FragmentAS />
+                  <FragmentAT />
+                  <FragmentAV />
+                  <FragmentAW />
+                  <FragmentAX />
+                  <FragmentAZ />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAG onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAH onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <NinoPanal pos="6" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 3} onClick={() => playback(3)}>
+                  <FragmentBA />
+                  <FragmentBB />
+                  <FragmentBC />
+                  <FragmentBD />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAI onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Mano pos="7" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 3} onClick={() => playback(3)}>
+                  <FragmentBE />
+                  <FragmentBF />
+                  <FragmentBG />
+                  <FragmentBH />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Cupulas pos="8" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 3} onClick={() => playback(3)}>
+                  <FragmentBI />
+                  <FragmentBJ />
+                  <FragmentBK />
+                  <FragmentBL />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Palomas pos="9" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 4} onClick={() => playback(4)}>
+                  <FragmentBO />
+                  <FragmentBP />
+                  <FragmentBQ />
+                  <FragmentBR />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Interior pos="10" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 4} onClick={() => playback(4)}>
+                  <FragmentBS />
+                  <FragmentBT />
+                  <FragmentBU />
+                  <FragmentBV />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAO onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Cerro pos="11" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 4} onClick={() => playback(4)}>
+                  <FragmentBW />
+                  <FragmentBX />
+                  <FragmentBY />
+                  <FragmentBZ />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAP onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Cera pos="12" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 5} onClick={() => playback(5)}>
+                  <FragmentCA />
+                  <FragmentCB />
+                  <FragmentCC />
+                  <FragmentCD />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAQ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <NinoAbeja pos="13" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 5} onClick={() => playback(5)}>
+                  <FragmentCE />
+                  <FragmentCF />
+                  <FragmentCG />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAR onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Panal pos="14" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 5} onClick={() => playback(5)}>
+                  <FragmentCH />
+                  <FragmentCI />
+                  <FragmentCJ />
+                  <FragmentCK />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAS onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <FuegoRefineria pos="15" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 5} onClick={() => playback(5)}>
+                  <FragmentCL />
+                  <FragmentCM />
+                  <FragmentCN />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAT onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Capsulas pos="16" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 6} onClick={() => playback(6)}>
+                  <FragmentCO />
+                  <FragmentCP />
+                  <FragmentCQ />
+                  <FragmentCR />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAU onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Aereo pos="17" />
+          <Container>
+            <Row>
+              <Column active={current === 6} onClick={() => playback(6)}>
+                <Fragment>
+                  <FragmentCS />
+                  <FragmentCT />
+                  <FragmentCU />
+                  <FragmentCV />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Campanario pos="18" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 6} onClick={() => playback(6)}>
+                  <FragmentCW />
+                  <FragmentCX />
+                  <FragmentCY />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAX onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Tortolas pos="19" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 2} onClick={() => playback(2)}>
+                  <FragmentCZ />
+                  <FragmentDA />
+                  <FragmentDB />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Bichos pos="20" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 7} onClick={() => playback(7)}>
+                  <FragmentDC />
+                  <FragmentDD />
+                  <FragmentDE />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <NinoCielo pos="21" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 7} onClick={() => playback(7)}>
+                  <FragmentDG />
+                  <FragmentDH />
+                  <FragmentDI />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Palmeras pos="22" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 7} onClick={() => playback(7)}>
+                  <FragmentDJ />
+                  <FragmentDK />
+                  <FragmentDL />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoBB onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <NinoCornisa pos="23" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 8} onClick={() => playback(8)}>
+                  <FragmentDM />
+                  <FragmentDN />
+                  <FragmentDO />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <PajarosCEARG pos="24" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 8} onClick={() => playback(8)}>
+                  <FragmentDP />
+                  <FragmentDQ />
+                  <FragmentDR />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <Bayas pos="25" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 6} onClick={() => playback(6)}>
+                  <FragmentDS />
+                  <FragmentDT />
+                  <FragmentDU />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <NinoPanalito pos="26" />
+          <Container>
+            <Row>
+              <Column>
+                <Fragment active={current === 8} onClick={() => playback(8)}>
+                  <FragmentDV />
+                  <FragmentDW />
+                  <FragmentDX />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoBF onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+          </Container>
+          <PajarosCupula pos="27" />
+        </div>
+        <Figures />
+        <Cursor />
+        <ZoomA
+          onPlay={handleVideoPlay}
+          onPause={handleVideoPause}
+          selector="#anchor-zoom-a"
+        />
+        <ZoomB
+          onPlay={handleVideoPlay}
+          onPause={handleVideoPause}
+          selector="#anchor-zoom-b"
+        />
+        <ZoomC
+          onPlay={handleVideoPlay}
+          onPause={handleVideoPause}
+          selector="#anchor-zoom-c"
+        />
+        <ZoomD
+          onPlay={handleVideoPlay}
+          onPause={handleVideoPause}
+          selector="#anchor-zoom-d"
+        />
+      </Layout>
+    </ParallaxProvider>
   )
 }
 
