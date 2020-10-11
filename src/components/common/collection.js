@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 const CollectionStyled = styled.div`
   display: flex;
-  overflow-x: scroll;
   width: 100%;
+  overflow: hidden;
   &::-webkit-scrollbar {
     display: none;
   }
-  > img {
+  img {
     margin-right: 50px;
   }
 `

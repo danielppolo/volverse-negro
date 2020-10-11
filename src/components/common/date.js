@@ -1,24 +1,33 @@
 import React from 'react'
+import styled from 'styled-components'
+import useTime from '../../hooks/use-time'
+
+const DateStyled = styled.div`
+  font-size: 5rem;
+  font-family: Inter, sans-serif;
+`
 
 function DateTitle({ props }) {
-  const date = new Date()
+  const {
+    year, month, day, hour, minute, second,
+  } = useTime()
   return (
-    <div>
+    <DateStyled>
       <h1>
-        {date.getFullYear()}
-      /
-        {`${date.getMonth()}`.padStart(2, '0')}
-      /
-        {`${date.getDay()}`.padStart(2, '0')}
+        {year}
+        /
+        {month}
+        /
+        {day}
       </h1>
       <h1>
-        {`${date.getHours()}`.padStart(2, '0')}
+        {hour}
         .
-        {`${date.getMinutes()}`.padStart(2, '0')}
+        {minute}
         .
-        {`${date.getSeconds()}`.padStart(2, '0')}
+        {second}
       </h1>
-    </div>
+    </DateStyled>
   )
 }
 

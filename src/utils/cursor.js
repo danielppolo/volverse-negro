@@ -10,10 +10,15 @@ export default class Cursor extends EventEmitter {
     this.mouse = { x: 0, y: 0 }
     // Get the scroll Y position
     this.docYScroll = this.getPageYScroll()
+
     window.addEventListener('scroll', () => {
+      const prevDocYScroll = this.docYScroll
       this.docYScroll = this.getPageYScroll()
+      this.mouse.y = this.mouse.y + this.docYScroll - prevDocYScroll
     })
+
     window.addEventListener('mousemove', (ev) => { this.mouse = this.getMousePos(ev) })
+
     this.DOM = { el }
     this.DOM.el.style.opacity = 0
     this.DOM.circleInner = this.DOM.el.querySelector('.cursor__inner')
@@ -42,6 +47,7 @@ export default class Cursor extends EventEmitter {
       requestAnimationFrame(() => this.render())
       window.removeEventListener('mousemove', this.onMouseMoveEv)
     }
+
     window.addEventListener('mousemove', this.onMouseMoveEv)
   }
 
@@ -98,6 +104,10 @@ export default class Cursor extends EventEmitter {
       })
   }
 
+  click() {
+    this.tl.restart()
+  }
+
   enter() {
     this.renderedStyles.radius.current = 100
     this.tl.restart()
@@ -111,5 +121,6 @@ export default class Cursor extends EventEmitter {
   listen() {
     this.on('enter', () => this.enter())
     this.on('leave', () => this.leave())
+    this.on('click', () => this.click())
   }
 }
