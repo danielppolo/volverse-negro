@@ -1,9 +1,11 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentDW() {
   return (
-    <p>
+    <Fragment pos="wwww">
+      <p>
 Señora de las Abejas: abre la puerta de las colmenas,
 te llevaremos miel en cántaros, iremos zumbando como
 
@@ -16,7 +18,8 @@ la tomamos de tus hijas, pero se la devolveremos en
 días venideros. Todo es propiedad privada. Vallas y
 alambres. No pasar. Cuidado con los charcos. Espejos
 humeantes.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

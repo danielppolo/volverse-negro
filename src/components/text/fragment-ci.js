@@ -1,11 +1,13 @@
 import React from 'react'
-
+import Fragment from '../common/fragment'
 
 function FragmentCI() {
   return (
-    <p>
+    <Fragment pos="iii">
+      <p>
 Los cielos parecen abiertos.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

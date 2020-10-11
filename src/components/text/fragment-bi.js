@@ -1,12 +1,15 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBI() {
   return (
-    <p>
+    <Fragment pos="ii">
+      <p>
 Las abejas no vuelan, excavan. Sus panales son abismos profundos, rocas
 encalladas, cuevas secretas.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

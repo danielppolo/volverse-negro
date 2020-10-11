@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBS() {
   return (
-    <p>
+    <Fragment pos="ss">
+      <p>
 Troya: ¿dónde están los muñecos? Salamanca: ¿qué habrá sido de los caballos?
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBQ() {
   return (
-    <p>
+    <Fragment pos="qq">
+      <p>
 El Caballo era un regalo y también la derrota.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

@@ -1,9 +1,11 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentCV() {
   return (
-    <p>
+    <Fragment pos="vvv">
+      <p>
 En el ex Convento, un coro de niños. Sonidos secuenciales: inspiración y
 expiración. Un verbo para los pulmones y la garganta, que sopla aquello que nunca
 podríamos decir. Los niños juegan con al aire, salen corriendo entre la brisa y otras
@@ -12,7 +14,8 @@ puertas, entre palmeras y palomas impenitentes. El agua cristalina que sale de l
 llaves y que corre entre las manos, aire transparente que se disipa en el cielo, las
 golondrinas y también abejorros. Coros de otras especies, cantos de vidas invisibles.
 Oratorios terrestres y alegría solar de los infantes.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

@@ -1,12 +1,14 @@
 import React from 'react'
-
+import Fragment from '../common/fragment'
 
 function FragmentDX() {
   return (
-    <p>
+    <Fragment pos="xxxx">
+      <p>
 zzzzzzzzzzzzzzzzzZzZzZzzzzzzzzzzzzzzzzzzzzzzzzzzz
 zzzzzzzzzzzzz
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

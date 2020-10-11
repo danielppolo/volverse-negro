@@ -30,7 +30,7 @@ function Loading({ done, onClick }) {
     }
   }, [done])
 
-  console.log('Done')
+  console.log('Done', done)
   return (
     <div className="Loading" onClick={handleClick}>
       <animated.span>{number.interpolate(number => number.toFixed())}</animated.span>

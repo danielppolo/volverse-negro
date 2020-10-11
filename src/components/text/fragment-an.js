@@ -1,11 +1,13 @@
 import React from 'react'
-
+import Fragment from '../common/fragment'
 
 function FragmentAN() {
   return (
-    <p>
+    <Fragment pos="n">
+      <p>
 Ni el más resistente de los metales sobrevivirá al tiempo.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

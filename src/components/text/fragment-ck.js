@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentCK() {
   return (
-    <p>
+    <Fragment pos="kkk">
+      <p>
       Todo tiene un dueño. “No pasar”.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

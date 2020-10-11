@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import useTime from '../../hooks/use-time'
 
 const DateStyled = styled.div`
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: Inter, sans-serif;
 `
 

@@ -1,12 +1,15 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentAH() {
   return (
-    <p>
+    <Fragment pos="h">
+      <p>
 ¿Salamanca es un valle?, ¿Chernobyl, Ventanas, Hiroshima, Nagasaki, Bhopal,
 Fukushima?
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

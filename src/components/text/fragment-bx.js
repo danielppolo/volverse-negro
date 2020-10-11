@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentBX() {
   return (
-    <p>
+    <Fragment pos="xx">
+      <p>
       “Cuadrado negro sobre fondo blanco” (Kasimir Malevich)
-    </p>
+      </p>
+    </Fragment>
   )
 }
 

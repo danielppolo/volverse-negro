@@ -1,11 +1,14 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentCX() {
   return (
-    <p>
-Todo es propiedad privada, incluso la muerte.
-    </p>
+    <Fragment pos="xxx">
+      <p>
+      Todo es propiedad privada, incluso la muerte.
+      </p>
+    </Fragment>
   )
 }
 

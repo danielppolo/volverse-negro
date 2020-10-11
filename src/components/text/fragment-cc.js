@@ -1,12 +1,15 @@
 import React from 'react'
+import Fragment from '../common/fragment'
 
 
 function FragmentCC() {
   return (
-    <p>
+    <Fragment pos="ccc">
+      <p>
 Un Cristo Negro sumergido en la Oscuridad de la Noche. Oculto para los ojos
 ciegos de sus captores.
-    </p>
+      </p>
+    </Fragment>
   )
 }
 
