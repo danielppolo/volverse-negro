@@ -7,7 +7,7 @@ const useMediaLoaded = () => {
   const image = useImageLoaded()
   const font = useFontLoaded()
 
-  return (video && image && font)
+  return { font, video, image }
 }
 
 export default useMediaLoaded

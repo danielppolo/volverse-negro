@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 
-function Loading({ done, onClick }) {
+function Loading({ done, fontReady, onClick }) {
   const [next, setNext] = useState(false)
   const { number } = useSpring({
     number: 100,
@@ -37,11 +37,15 @@ function Loading({ done, onClick }) {
 
   return (
     <div className="Loading" onClick={handleClick}>
-      <p
-        className="welcome interact"
-      >
+      {
+        fontReady && (
+        <p
+          className="welcome interact"
+        >
       Volverse negro
-      </p>
+        </p>
+        )
+      }
       <div className="right-bottom">
         {
          next ? (

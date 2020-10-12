@@ -5,6 +5,7 @@
   margin: 0;
 }
 html {
+  cursor: crosshair;
   font-size: 24px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -74,6 +75,10 @@ h1 {
 		stroke: var(--cursor-stroke);
 		stroke-width: var(--cursor-stroke-width);
 	}
+	.cursor__text {
+    fill: var(--color-text);
+    font-size: 0.8rem;
+	}
 }
 
 .Loading {
@@ -119,6 +124,7 @@ h1 {
 
 .overflow-hidden {
   overflow: hidden;
+  width: 100%;
 }
 
 @keyframes pulse {

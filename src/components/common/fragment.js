@@ -6,7 +6,7 @@ const FragmentStyled = styled.div`
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding-right: 2rem;
+  padding-right: 2.5rem;
   margin-bottom: 1rem;
   .pos {
     transform: translate(-100%, 0);
@@ -17,13 +17,13 @@ const FragmentStyled = styled.div`
     font-style: italic;
   }
   img {
-    width: 200px;
+    max-width: 100%;
   }
 `
 
 function Fragment({ children, pos, ...otherProps }) {
   return (
-    <FragmentStyled {...otherProps}>
+    <FragmentStyled {...otherProps} data-cursor="reproducir">
       {
          children
        }

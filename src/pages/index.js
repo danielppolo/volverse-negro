@@ -169,6 +169,8 @@ import Bayas from '../components/collections/collection-x'
 import NinoPanalito from '../components/collections/collection-y'
 import PajarosCupula from '../components/collections/collection-z'
 
+import Musicians from '../components/common/musicians'
+import MusiciansIntro from '../components/common/musicians-intro'
 import Cartography from '../components/common/cartography'
 import Intro from '../components/common/intro'
 import Loading from '../components/common/loading'
@@ -180,6 +182,7 @@ import Container from '../components/common/container'
 import Row from '../components/common/row'
 import Column from '../components/common/column'
 import Empty from '../components/common/empty'
+import Title from '../components/common/title'
 import Fragment from '../components/common/fragment'
 import useMediaLoaded from '../hooks/use-media-loaded'
 import useTracks from '../hooks/use-tracks'
@@ -192,27 +195,26 @@ import useStreaming from '../hooks/use-streaming'
 
 const IndexPage = () => {
   const [ready, setReady] = useState(false)
-  const [video, setVideo] = useState(true)
-  const loaded = useMediaLoaded()
-  useStreaming('CWu29PRCUvQ', [
+  const [playing, setPlaying] = useState(true)
+  const { font, video, image } = useMediaLoaded()
+  useStreaming('0iit6c3h-Qs', [
     'streaming-1',
     'streaming-2',
     'streaming-3',
     'streaming-4',
-    'streaming-5',
   ], ready)
   const {
     current, next, previous, playback,
   } = useTracks()
-  useAmbientSound((video || current))
+  useAmbientSound((playing || current))
   const stamp = useFigures(ready)
 
   const handleVideoPlay = useCallback(
-    () => { setVideo(true) },
+    () => { setPlaying(true) },
     [],
   )
   const handleVideoPause = useCallback(
-    () => { setVideo(false) },
+    () => { setPlaying(false) },
     [],
   )
 
@@ -221,7 +223,8 @@ const IndexPage = () => {
       <Layout>
         <SEO title="Volverse negro" />
         <Loading
-          done={loaded}
+          fontReady={font}
+          done={(font && video && image)}
           onClick={() => setReady(true)}
         />
         <div>
@@ -233,9 +236,9 @@ const IndexPage = () => {
         </div>
         <div>
           <Container>
+            <Title>El valle inquietante</Title>
             <Row>
               <Column width={50}>
-                <h1>El valle inquietante</h1>
                 <Fragment active={current === 1} onClick={() => playback(1)}>
                   <FragmentAA />
                 </Fragment>
@@ -325,6 +328,15 @@ const IndexPage = () => {
                   <FragmentAS />
                   <FragmentAT />
                   <FragmentAV />
+                </Fragment>
+              </Column>
+              <Column>
+                <VideoAG onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+            <Row>
+              <Column width={50}>
+                <Fragment active={current === 2} onClick={() => playback(2)}>
                   <FragmentAW />
                   <FragmentAX />
                   <FragmentAY />
@@ -332,7 +344,6 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAG onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoAH onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
@@ -401,6 +412,7 @@ const IndexPage = () => {
               </Column>
               <Column>
                 <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
@@ -416,7 +428,6 @@ const IndexPage = () => {
                 </Fragment>
               </Column>
               <Column>
-                <VideoAM onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoAO onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
@@ -606,6 +617,7 @@ const IndexPage = () => {
                 <Fragment active={current === 7} onClick={() => playback(7)}>
                   <FragmentDK />
                   <FragmentDL />
+                  <FragmentDM />
                 </Fragment>
               </Column>
               <Column>
@@ -618,7 +630,6 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Fragment active={current === 8} onClick={() => playback(8)}>
-                  <FragmentDM />
                   <FragmentDN />
                   <FragmentDO />
                 </Fragment>
@@ -636,6 +647,7 @@ const IndexPage = () => {
                   <FragmentDP />
                   <FragmentDQ />
                   <FragmentDR />
+                  <FragmentDS />
                 </Fragment>
               </Column>
               <Column>
@@ -648,7 +660,6 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Fragment active={current === 6} onClick={() => playback(6)}>
-                  <FragmentDS />
                   <FragmentDT />
                   <FragmentDU />
                 </Fragment>
@@ -664,23 +675,32 @@ const IndexPage = () => {
               <Column width={50}>
                 <Fragment active={current === 8} onClick={() => playback(8)}>
                   <FragmentDV />
-                  <FragmentDW />
-                  <FragmentDX />
                 </Fragment>
               </Column>
               <Column>
                 <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoBF onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+            <Row>
+              <Column width={50}>
+                <Fragment active={current === 8} onClick={() => playback(8)}>
+                  <FragmentDW />
+                  <FragmentDX />
+                </Fragment>
+              </Column>
+              <Column>
                 <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
           <PajarosCupula pos="27" />
-
-          <Streaming id="streaming-5" />
+        </div>
+        <div>
+          <MusiciansIntro />
+          <Musicians />
         </div>
         <Figures />
-        <Cursor />
         <ZoomA
           onPlay={handleVideoPlay}
           onPause={handleVideoPause}
@@ -701,6 +721,9 @@ const IndexPage = () => {
           onPause={handleVideoPause}
           selector="#anchor-zoom-d"
         />
+        {
+          ready && <Cursor />
+        }
       </Layout>
     </ParallaxProvider>
   )

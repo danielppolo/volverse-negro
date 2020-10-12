@@ -8,21 +8,21 @@ const VideoStyled = styled.video`
 `
 
 function Video({
-  src, onPlay, onPause, width, offsetY, offsetX, style,
+  src, onPlay, onPause, width, y, x, style,
 }) {
   const video = useRef(null)
   const handleMouseEnter = () => {
-    // video.current.play()
-    // onPlay()
+    video.current.play()
+    onPlay()
   }
   const handleMouseLeave = () => {
-    // video.current.pause()
-    // onPause()
+    video.current.pause()
+    onPause()
   }
   return (
     <Parallax
-      y={offsetY || [-20, 20]}
-      x={offsetX}
+      y={y || [-20, 20]}
+      x={x}
       // className="overflow-hidden"
       tagOuter="div"
       styleOuter={style}
@@ -31,7 +31,7 @@ function Video({
         src={src}
         preload="metadata"
         ref={video}
-        className="interact"
+        data-cursor="observar"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />

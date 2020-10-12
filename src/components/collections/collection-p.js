@@ -1,20 +1,22 @@
 import React from 'react'
 import Collection from '../common/collection'
-import Image from '../common/image'
 
 function CollectionP({ props }) {
   return (
-    <Collection>
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130640/volverse_negro/images/15._a%C3%A9reo75_xe5wow.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130583/volverse_negro/images/15._a%C3%A9reo77_yjhkn0.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130583/volverse_negro/images/15._a%C3%A9reo60_vsk0dz.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130583/volverse_negro/images/15._a%C3%A9reo76_zrwkzy.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130583/volverse_negro/images/15._a%C3%A9reo78_c1tyns.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130582/volverse_negro/images/15._a%C3%A9reo74_pr4ksh.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130582/volverse_negro/images/15._a%C3%A9reo66_k52rs2.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130576/volverse_negro/images/15._a%C3%A9reo57_gnoysc.jpg" alt="" />
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130576/volverse_negro/images/15._a%C3%A9reo65_nr9rbh.jpg" alt="" />
-    </Collection>
+    <Collection
+      alt="Cielo"
+      src={[
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487043/volverse_negro/images/15._a%C3%A9reo57_o4id2v.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487042/volverse_negro/images/15._a%C3%A9reo60_yw9r9x.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487043/volverse_negro/images/15._a%C3%A9reo65_la6qe9.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487043/volverse_negro/images/15._a%C3%A9reo66_sqvcyi.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487043/volverse_negro/images/15._a%C3%A9reo74_cjkszq.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487043/volverse_negro/images/15._a%C3%A9reo75_qkaaoe.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487043/volverse_negro/images/15._a%C3%A9reo76_wufp85.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/15._a%C3%A9reo77_fnjwzb.jpg',
+        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/15._a%C3%A9reo78_mi9wlb.jpg',
+      ]}
+    />
   )
 }
 
