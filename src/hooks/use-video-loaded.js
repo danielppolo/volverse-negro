@@ -10,6 +10,7 @@ const useVideoLoaded = () => {
       })
     }))
     Promise.all(promises).then((value) => {
+      console.log('Video loaded 🎉')
       setLoaded(true)
     })
   }, [])

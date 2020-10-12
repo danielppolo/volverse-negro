@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 const ZoomStyled = styled.video`
@@ -22,7 +22,8 @@ function Zoom({ selector, src }) {
     const anchor = document.querySelector(selector)
     if (anchor) {
       anchor.addEventListener('mouseenter', () => {
-        anchor.style.zIndex = 11
+        anchor.style.zIndex = 110
+        video.current.style.transform = `rotate(${(Math.floor(Math.random() * 20)) * (Math.random() > 0.5 ? -1 : 1)}deg) translate(-50%, -50%)`
         video.current.classList.add('show')
         video.current.play()
       })

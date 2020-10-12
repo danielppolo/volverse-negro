@@ -234,14 +234,23 @@ const IndexPage = () => {
         <div>
           <Container>
             <Row>
-              <Column width={40}>
+              <Column width={50}>
+                <h1>El valle inquietante</h1>
                 <Fragment active={current === 1} onClick={() => playback(1)}>
                   <FragmentAA />
-                  <FragmentAB />
                 </Fragment>
               </Column>
               <Column grow>
                 <VideoAA onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              </Column>
+            </Row>
+            <Row>
+              <Column width={50}>
+                <Fragment active={current === 1} onClick={() => playback(1)}>
+                  <FragmentAB />
+                </Fragment>
+              </Column>
+              <Column grow>
                 <VideoAB onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
@@ -249,7 +258,7 @@ const IndexPage = () => {
           <Refineria pos="1" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 1} onClick={() => playback(1)}>
                   <FragmentAC />
                   <FragmentAD />
@@ -263,7 +272,7 @@ const IndexPage = () => {
           <Nino pos="2" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 1} onClick={() => playback(1)}>
                   <FragmentAE />
                 </Fragment>
@@ -276,7 +285,7 @@ const IndexPage = () => {
           <Maquinaria pos="3" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 2} onClick={() => playback(2)}>
                   <FragmentAF />
                   <FragmentAG />
@@ -293,7 +302,7 @@ const IndexPage = () => {
           <Parvadas pos="4" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 2} onClick={() => playback(2)}>
                   <FragmentAL />
                   <FragmentAM />
@@ -310,7 +319,7 @@ const IndexPage = () => {
           <NinoTurbina pos="5" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 2} onClick={() => playback(2)}>
                   <FragmentAR />
                   <FragmentAS />
@@ -334,7 +343,7 @@ const IndexPage = () => {
 
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 3} onClick={() => playback(3)}>
                   <FragmentBA />
                   <FragmentBB />
@@ -350,7 +359,7 @@ const IndexPage = () => {
           <Mano pos="7" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 3} onClick={() => playback(3)}>
                   <FragmentBE />
                   <FragmentBF />
@@ -366,7 +375,7 @@ const IndexPage = () => {
           <Cupulas pos="8" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 3} onClick={() => playback(3)}>
                   <FragmentBI />
                   <FragmentBJ />
@@ -382,7 +391,7 @@ const IndexPage = () => {
           <Palomas pos="9" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 4} onClick={() => playback(4)}>
                   <FragmentBO />
                   <FragmentBP />
@@ -398,7 +407,7 @@ const IndexPage = () => {
           <Interior pos="10" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 4} onClick={() => playback(4)}>
                   <FragmentBS />
                   <FragmentBT />
@@ -416,7 +425,7 @@ const IndexPage = () => {
           <Cerro pos="11" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 4} onClick={() => playback(4)}>
                   <FragmentBW />
                   <FragmentBX />
@@ -435,7 +444,7 @@ const IndexPage = () => {
 
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 5} onClick={() => playback(5)}>
                   <FragmentCA />
                   <FragmentCB />
@@ -451,7 +460,7 @@ const IndexPage = () => {
           <NinoAbeja pos="13" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 5} onClick={() => playback(5)}>
                   <FragmentCE />
                   <FragmentCF />
@@ -466,7 +475,7 @@ const IndexPage = () => {
           <Panal pos="14" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 5} onClick={() => playback(5)}>
                   <FragmentCH />
                   <FragmentCI />
@@ -483,7 +492,7 @@ const IndexPage = () => {
           <FuegoRefineria pos="15" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 5} onClick={() => playback(5)}>
                   <FragmentCM />
                   <FragmentCN />
@@ -497,7 +506,7 @@ const IndexPage = () => {
           <Capsulas pos="16" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 6} onClick={() => playback(6)}>
                   <FragmentCO />
                   <FragmentCP />
@@ -513,7 +522,7 @@ const IndexPage = () => {
           <Aereo pos="17" />
           <Container>
             <Row>
-              <Column active={current === 6} onClick={() => playback(6)}>
+              <Column width={50} active={current === 6} onClick={() => playback(6)}>
                 <Fragment>
                   <FragmentCS />
                   <FragmentCT />
@@ -529,7 +538,7 @@ const IndexPage = () => {
           <Campanario pos="18" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 6} onClick={() => playback(6)}>
                   <FragmentCW />
                   <FragmentCX />
@@ -547,7 +556,7 @@ const IndexPage = () => {
 
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 2} onClick={() => playback(2)}>
                   <FragmentCZ />
                   <FragmentDA />
@@ -564,7 +573,7 @@ const IndexPage = () => {
           <Bichos pos="20" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 7} onClick={() => playback(7)}>
                   <FragmentDE />
                   <FragmentDG />
@@ -580,7 +589,7 @@ const IndexPage = () => {
           <NinoCielo pos="21" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 7} onClick={() => playback(7)}>
                   <FragmentDJ />
                 </Fragment>
@@ -593,7 +602,7 @@ const IndexPage = () => {
           <Palmeras pos="22" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 7} onClick={() => playback(7)}>
                   <FragmentDK />
                   <FragmentDL />
@@ -607,7 +616,7 @@ const IndexPage = () => {
           <NinoCornisa pos="23" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 8} onClick={() => playback(8)}>
                   <FragmentDM />
                   <FragmentDN />
@@ -622,7 +631,7 @@ const IndexPage = () => {
           <PajarosCEARG pos="24" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 8} onClick={() => playback(8)}>
                   <FragmentDP />
                   <FragmentDQ />
@@ -637,7 +646,7 @@ const IndexPage = () => {
           <Bayas pos="25" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 6} onClick={() => playback(6)}>
                   <FragmentDS />
                   <FragmentDT />
@@ -652,7 +661,7 @@ const IndexPage = () => {
           <NinoPanalito pos="26" />
           <Container>
             <Row>
-              <Column>
+              <Column width={50}>
                 <Fragment active={current === 8} onClick={() => playback(8)}>
                   <FragmentDV />
                   <FragmentDW />

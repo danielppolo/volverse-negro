@@ -4,12 +4,16 @@ import styled from 'styled-components'
 const FragmentStyled = styled.div`
   font-style: ${({ focus }) => focus && 'italic'};
   position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
   .pos {
     transform: translate(-100%, 0);
     position: absolute;
     left: -20px;
     top: 0;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-style: italic;
   }
   img {

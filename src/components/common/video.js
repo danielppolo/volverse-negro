@@ -2,43 +2,39 @@ import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { Parallax } from 'react-scroll-parallax'
 
-const Placeholder = styled.div`
-  width: 720px;
-  height: 440px;
-  background-color: gray;
-  border: 1px solid black;
-  z-index: 3;
+const VideoStyled = styled.video`
+  /* max-width: ${Math.floor(Math.random() * 20) + 80}%; */
+  width: 100%;
 `
 
-function Video({ src, onPlay, onPause }) {
+function Video({
+  src, onPlay, onPause, width, offsetY, offsetX, style,
+}) {
   const video = useRef(null)
   const handleMouseEnter = () => {
-    video.current.play()
-    onPlay()
+    // video.current.play()
+    // onPlay()
   }
   const handleMouseLeave = () => {
-    video.current.pause()
-    onPause()
+    // video.current.pause()
+    // onPause()
   }
   return (
     <Parallax
-      className="custom-class"
-      y={[-20, 20]}
+      y={offsetY || [-20, 20]}
+      x={offsetX}
+      // className="overflow-hidden"
       tagOuter="div"
+      styleOuter={style}
     >
-      <video
+      <VideoStyled
         src={src}
         preload="metadata"
         ref={video}
-        className=".interact"
+        className="interact"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />
-      {/* <Placeholder
-        className=".interact"
-        onMouseEnter={() => { onPlay() }}
-        onMouseLeave={() => { onPause() }}
-      /> */}
     </Parallax>
   )
 }

@@ -5,6 +5,8 @@ const CollectionStyled = styled.div`
   display: flex;
   width: 100%;
   overflow: hidden;
+  padding-left: 1rem;
+  justify-content: center;
   &::-webkit-scrollbar {
     display: none;
   }

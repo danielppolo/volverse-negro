@@ -8,6 +8,7 @@ const useImageLoaded = () => {
       imagesLoaded(document.querySelectorAll('img'), { background: true }, resolve)
     })
     preloadImages().then((value) => {
+      console.log('Images loaded 🎉')
       setLoaded(true)
     })
   }, [])

@@ -49,6 +49,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+h1 {
+  font-family: 'EB Garamond', sans-serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 .cursor {
 	display: none;
 }
@@ -73,6 +80,7 @@ body::-webkit-scrollbar {
   font-size: 172px;
   z-index: 99;
   position: fixed;
+  padding: 1rem;
   top: 0;
   left: 0;
   right: 0;
@@ -90,6 +98,52 @@ body::-webkit-scrollbar {
 }
 .Loading.hide {
   display: none;
+}
+.Loading .right-bottom {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.Loading .percentage {
+  font-size: 4rem;
+  font-family: Inter, sans-serif;
+}
+.Loading .welcome {
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+  font-size: 8rem;
+}
+.Loading .continue {
+  font-size: 1.4rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 /* article,
 aside,
