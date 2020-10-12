@@ -21,7 +21,7 @@ const Cartography = () => (
       },
     ]}
     style={{
-      height: (typeof window !== 'undefined') ? window.innerWidth : 800,
+      height: '100vw',
     }}
   />
 )
