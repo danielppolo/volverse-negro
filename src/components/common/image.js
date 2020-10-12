@@ -3,17 +3,25 @@ import styled from 'styled-components'
 import { Parallax } from 'react-scroll-parallax'
 
 const ImageStyled = styled.img`
-  max-height: 300px;
-
+  width: 100%;
+  height: 100%;
 `
 
-function Image({ src }) {
+function Image({
+  src, offsetY, offsetX, style, width, overflow, height,
+}) {
   return (
     <Parallax
-      className="custom-class"
-      y={[-20, 20]}
+      className={overflow && 'overflow-hidden'}
+      tagOuter="div"
+      styleOuter={{
+        width,
+        height,
+      }}
+      x={offsetX}
+      y={offsetY || [-20, 20]}
     >
-      <ImageStyled src={src} alt="" />
+      <ImageStyled src={src} alt="" style={style} width={width} />
     </Parallax>
   )
 }

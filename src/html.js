@@ -13,7 +13,7 @@ export default function HTML({
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inter:wght@200&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inter:wght@300&display=swap" rel="stylesheet" />
         {headComponents}
       </head>
       <body {...bodyAttributes}>

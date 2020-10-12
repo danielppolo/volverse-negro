@@ -32,13 +32,16 @@ function Intro({ props }) {
         Un niño contempla un paisaje, toma aire y sopla, su aliento hace sonar una flauta.
         </p>
         <br />
+        <br />
         <p className="que">
        ¿Qué mira?
         </p>
         <br />
+        <br />
         <p>
        Entre la refinería y él se extiende la ciudad, Salamanca; un niño sentado en la cornisa superior del Centro de las Artes de Guanajuato, ahí a la intemperie, día y noche, es testigo del paso del tiempo y la vida. Toma aire -aire de Salamanca- y su aliento hace sonar una flauta.
         </p>
+        <br />
         <br />
         <p className="interact interactive" id="anchor-zoom-a">
         El niño es un respirador.
@@ -47,6 +50,7 @@ function Intro({ props }) {
           <br />
         El niño es un testigo.
         </p>
+        <br />
         <br />
         <p>
         Quizás las abejas comiencen a llevarse la cera hasta sus panales y el muñeco se deshaga en las praderas.

@@ -4,9 +4,10 @@ import Image from '../common/image'
 
 function CollectionX({ props }) {
   return (
-    <Collection>
-      <Image src="https://res.cloudinary.com/teatroojo/image/upload/v1602130649/volverse_negro/images/23._bayas62_v5xity.jpg" alt="" />
-    </Collection>
+    <Collection
+      src={['https://res.cloudinary.com/teatroojo/image/upload/v1602487034/volverse_negro/images/23._bayas62_j8xlyh.jpg']}
+      alt="Bayas"
+    />
   )
 }
 

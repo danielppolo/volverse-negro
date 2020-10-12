@@ -9,10 +9,11 @@ const MapStyled = styled(ParallaxBanner)`
 
 const Cartography = () => (
   <MapStyled
+    data-cursor="estampa"
     className="cartography"
     layers={[
       {
-        image: 'https://res.cloudinary.com/teatroojo/image/upload/v1602304897/volverse_negro/images/cartography_ftmbdn.jpg',
+        image: 'https://res.cloudinary.com/teatroojo/image/upload/v1602487386/volverse_negro/images/cartography_bvgtoi.jpg',
         amount: 0.2,
         props: {
           id: 'cartography',

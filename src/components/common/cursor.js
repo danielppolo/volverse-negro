@@ -3,18 +3,50 @@ import CursorClass from '../../utils/cursor'
 
 function Cursor() {
   const [cursor, setCursor] = useState(null)
-
+  const [label, setLabel] = useState('estampa')
   useEffect(() => {
     const c = new CursorClass(document.querySelector('.cursor'))
-    document.addEventListener('click', () => {
+    const interactiveItems = Array.from(document.querySelectorAll('.interact'))
+    const items = Array.from(document.querySelectorAll('[data-cursor]'))
+    const handleDocumentClick = (event) => {
       setCursor(c)
       c.emit('click')
+      setLabel(null)
+    }
+    const handleInteractEnter = (event) => {
+      c.emit('enter')
+    }
+    const handleInteractLeave = (event) => {
+      c.emit('leave')
+    }
+    const handleItemEnter = (event) => {
+      c.emit('enter')
+      setLabel(event.currentTarget.dataset.cursor)
+    }
+    const handleItemLeave = (event) => {
+      c.emit('leave')
+      setLabel(null)
+    }
+    document.addEventListener('click', handleDocumentClick)
+    interactiveItems.forEach((el) => {
+      el.addEventListener('mouseenter', handleInteractEnter)
+      el.addEventListener('mouseleave', handleInteractLeave)
     })
-
-    Array.from(document.querySelectorAll('.interact')).forEach((el) => {
-      el.addEventListener('mouseenter', () => c.emit('enter'))
-      el.addEventListener('mouseleave', () => c.emit('leave'))
+    items.forEach((el) => {
+      el.addEventListener('mouseenter', handleItemEnter)
+      el.addEventListener('mouseleave', handleItemLeave)
     })
+    return () => {
+      document.removeEventListener('click', handleDocumentClick)
+      interactiveItems.forEach((el) => {
+        el.removeEventListener('mouseenter', handleInteractEnter)
+        el.removeEventListener('mouseleave', handleInteractLeave)
+      })
+      items.forEach((el) => {
+        el.removeEventListener('mouseenter', handleItemEnter)
+        el.removeEventListener('mouseleave', handleItemLeave)
+      })
+    }
   }, [])
 
   return (
@@ -39,6 +71,18 @@ function Cursor() {
           <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warpOffset" />
         </filter>
       </defs>
+      <text
+        xmlns="http://www.w3.org/2000/svg"
+        x="50%"
+        y="50%"
+        dominantBaseline="middle"
+        textAnchor="middle"
+        fontSize="1rem"
+        className="cursor__text"
+        fontFamily="'EB Garamond',serif"
+      >
+        {label}
+      </text>
       <circle className="cursor__inner" cx="110" cy="110" r="60" />
     </svg>
   )

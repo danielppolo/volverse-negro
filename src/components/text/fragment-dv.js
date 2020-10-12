@@ -159,9 +159,9 @@ function FragmentDV() {
         <br />
   zzzzzzzzzzzzzzzzzzzzzzzzzzzz
         <br />
-  ̽SONIDOS CON LA PUNTA DE LA LENGUA
+  SONIDOS CON LA PUNTA DE LA LENGUA
         <br />
-  ENTRE LOS DIENTES, AIRE̾
+  ENTRE LOS DIENTES, AIRE
         <br />
   zzzzzzzzzzzzzzzzzZzZzZzzzzzzzzzzzzzzzzzzzzzzzzzzz
   zzzzzzzzzzzzz

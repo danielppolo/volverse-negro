@@ -1,4 +1,3 @@
-import { element } from 'prop-types'
 import { useEffect, useState } from 'react'
 
 const useStreaming = (videoId, elements, ready) => {
@@ -9,11 +8,12 @@ const useStreaming = (videoId, elements, ready) => {
     window.onYouTubeIframeAPIReady = () => {
       elements.forEach((id) => {
         const p = new YT.Player(id, {
-          height: window.innerHeight || 600,
+          height: width * 0.75 || 600,
           width: width || '100%',
           videoId,
           events: {
             onReady: (event) => {
+              console.log('Youtube API is ready.')
               players.push(event.target)
             },
           },
@@ -28,7 +28,7 @@ const useStreaming = (videoId, elements, ready) => {
 
   useEffect(() => {
     if (ready && players) {
-      console.log(players)
+      console.log('Streaming started playing...')
       players.forEach((player) => {
         player.playVideo()
         player.mute()

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import useTime from '../../hooks/use-time'
 
 const DateStyled = styled.div`
-  font-size: 3rem;
+  font-size: 6rem;
   font-family: Inter, sans-serif;
 `
 
@@ -13,20 +13,20 @@ function DateTitle({ props }) {
   } = useTime()
   return (
     <DateStyled>
-      <h1>
+      <p>
         {year}
         /
         {month}
         /
         {day}
-      </h1>
-      <h1>
+      </p>
+      <p>
         {hour}
         .
         {minute}
         .
         {second}
-      </h1>
+      </p>
     </DateStyled>
   )
 }

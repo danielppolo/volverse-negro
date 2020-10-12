@@ -12,6 +12,10 @@ const useAmbientSound = (secondary) => {
       document.removeEventListener('click', handleOnClick)
     }
     document.addEventListener('click', handleOnClick)
+
+    return () => {
+      document.removeEventListener('click', handleOnClick)
+    }
   }, [])
 
   useEffect(() => {
@@ -24,7 +28,7 @@ const useAmbientSound = (secondary) => {
 
   useEffect(() => {
     if (track) {
-      track.volume = secondary ? 0.1 : 0.2
+      track.volume = secondary ? 0 : 0.1
     }
   }, [secondary])
 }

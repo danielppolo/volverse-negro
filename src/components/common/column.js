@@ -1,18 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
 
-
-function Column({ width, grow, children }) {
-  return (
-    <div
-      style={{
-        flexBasis: `${width}%`,
-        flexGrow: grow ? 1 : 0,
-      }}
-    >
-      {children}
-    </div>
-  )
-}
-
+const Column = styled.div`
+  flex-basis: ${({ width }) => width}%;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+`
 
 export default Column

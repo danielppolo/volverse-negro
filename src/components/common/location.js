@@ -5,13 +5,13 @@ import Reveal from './reveal'
 
 const LocationStyled = styled.p`
   align-self: flex-end;
-  font-size: 2.4rem;
+  font-size: 2rem;
   padding-left: 50%;
   p {
     text-align: right;
   }
   .coordinates {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `
 
