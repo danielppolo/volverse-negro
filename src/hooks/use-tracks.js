@@ -3,8 +3,8 @@ import { scroller } from 'react-scroll'
 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended_event
 
-const scrollTo = (num) => {
-  scroller.scrollTo(`track-${num}`, {
+const scrollTo = (num, seconds = 0) => {
+  scroller.scrollTo(`track-${num}-${seconds}`, {
     duration: 1500,
     delay: 100,
     smooth: true,
@@ -49,6 +49,7 @@ function useTracks() {
         const handleWindowScroll = (event) => {
           if (window.scrollY > document.querySelector('.cartography').offsetTop) {
             console.log('Autoplay 🔈')
+            audioTracks.forEach((track) => { track.pause() })
             audioTracks[0].play()
             window.removeEventListener('scroll', handleWindowScroll)
           }
@@ -79,7 +80,7 @@ function useTracks() {
         if (current !== null) tracks[current].pause()
         tracks[num - 1].currentTime = currentTime
         tracks[num - 1].play()
-        // scrollTo(num)
+        scrollTo(num, currentTime)
         setSection(currentTime)
         setCurrent(num - 1)
         setActive(true)

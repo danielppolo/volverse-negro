@@ -16,20 +16,21 @@ function DateTitle({ props }) {
   } = useTime()
   return (
     <DateStyled>
-      <p>
+      <span>
         {year}
         /
         {month}
         /
         {day}
-      </p>
-      <p>
+      </span>
+      <br />
+      <span>
         {hour}
         .
         {minute}
         .
         {second}
-      </p>
+      </span>
     </DateStyled>
   )
 }

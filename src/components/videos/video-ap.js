@@ -6,7 +6,7 @@ function VideoAP(props) {
   return (
     <Video
       style={{
-        marginTop: '30rem',
+        marginTop: '20rem',
         alignSelf: 'flex-end',
         width: '90%',
       }}

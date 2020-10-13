@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Collection from './collection'
 
-const Container = styled.div`
-`
 function Musicians({ props }) {
   return (
     <Collection
@@ -14,7 +12,7 @@ function Musicians({ props }) {
         'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+2.jpg',
         'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+3.jpg',
         'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+4.jpg',
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+5b.jpg',
+        // 'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+5b.jpg',
         'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+7.jpg',
         'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+8.jpg',
         'https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+9.jpg',

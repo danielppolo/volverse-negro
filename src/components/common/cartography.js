@@ -1,29 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ParallaxBanner } from 'react-scroll-parallax'
 
-const MapStyled = styled(ParallaxBanner)`
+const MapStyled = styled.div`
   max-width: 100%;
   margin: 100px 0;
+  height: 100vw;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .map-overlay {
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `
 
 const Cartography = () => (
   <MapStyled
     data-cursor="estampa"
     className="cartography"
-    layers={[
-      {
-        image: 'https://volverse-negro.s3.us-east-2.amazonaws.com/images/cartography.jpg',
-        amount: 0.2,
-        props: {
-          id: 'cartography',
-        },
-      },
-    ]}
-    style={{
-      height: '100vw',
-    }}
-  />
+  >
+    <img
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/images/cartography.jpg"
+      alt="Cartografía"
+    />
+    {/* TODO: Update picture with high-res */}
+    {/* <img
+      className="map-overlay"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+5b.jpg"
+      alt="Cartografía"
+    /> */}
+  </MapStyled>
 )
 
 
