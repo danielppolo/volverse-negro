@@ -169,6 +169,8 @@ import Bayas from '../components/collections/collection-x'
 import NinoPanalito from '../components/collections/collection-y'
 import PajarosCupula from '../components/collections/collection-z'
 
+import Posters from '../components/common/posters'
+import PostersIntro from '../components/common/posters-intro'
 import Musicians from '../components/common/musicians'
 import MusiciansIntro from '../components/common/musicians-intro'
 import Cartography from '../components/common/cartography'
@@ -699,6 +701,10 @@ const IndexPage = () => {
         <div>
           <MusiciansIntro />
           <Musicians />
+        </div>
+        <div>
+          <PostersIntro />
+          <Posters />
         </div>
         <Figures />
         <ZoomA

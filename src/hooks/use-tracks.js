@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended_event
+
 function useTracks() {
   const [current, setCurrent] = useState(null)
   const [tracks, setTracks] = useState([])

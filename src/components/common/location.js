@@ -10,8 +10,9 @@ const LocationStyled = styled.p`
   p {
     text-align: right;
   }
-  .coordinates {
-    font-size: 2rem;
+  @media (max-width: 720px) {
+    font-size: 1.5rem;
+    padding-left: 40%;
   }
 `
 

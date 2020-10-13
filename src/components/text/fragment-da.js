@@ -6,6 +6,9 @@ const ImageStyled = styled.img`
   /* position: absolute; */
   margin-left: 50%;
   mix-blend-mode: multiply;
+  @media (max-width: 720px) {
+    margin-left: 0;
+  }
 `
 
 function FragmentDA() {

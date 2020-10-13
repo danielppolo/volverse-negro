@@ -20,7 +20,7 @@ const MusiciansIntroStyled = styled.div`
     font-style: italic;
   }
   @media (max-width: 720px) {
-    height: 30vh;
+    height: 50vh;
   }
 `
 
@@ -30,9 +30,10 @@ function MusiciansIntro({ props }) {
       y={[-20, 20]}
     >
       <MusiciansIntroStyled>
-        <i>
-        Cada día a las 18:00hrs, integrantes de la Banda Sinfónica de Salamanca salen a sus azoteas, patios o ventanas, toman aire y soplan, su aliento hace sonar un instrumento musical.
-        </i>
+        <h1>Carteles Volverse negro, en la ciudad.</h1>
+        <p>
+        En los espacios públicos y la barda que rodea a la refinería de Salamanca, están dispuestos una serie de carteles que proponen múltiples tentativas de lectura en torno a la figura de un niño sentado en la cornisa superior del Centro de las Artes de Guanajuato, ante el enigma de su aparición.
+        </p>
       </MusiciansIntroStyled>
     </Parallax>
   )

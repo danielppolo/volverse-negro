@@ -19,11 +19,14 @@ function Video({
     video.current.pause()
     onPause()
   }
+
   return (
     <Parallax
-      y={y || [-20, 20]}
-      x={x}
+      // y={y || [-20, 20]}
+      className="video-container"
       // className="overflow-hidden"
+      y={[-20, 20]}
+      x={x}
       tagOuter="div"
       styleOuter={style}
     >
@@ -32,7 +35,7 @@ function Video({
         preload="metadata"
         ref={video}
         poster={poster}
-        data-cursor="observar"
+        data-cursor="contemplar"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />

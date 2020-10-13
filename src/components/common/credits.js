@@ -4,6 +4,7 @@ import Container from './container'
 import Logotypes from './logotypes'
 
 const CreditsStyled = styled.div`
+  margin-top: 10rem;
   .legend {
     font-size: 0.8rem;
     span {
@@ -72,13 +73,45 @@ function Credits() {
           <br />
           <br />
 
+          <br />
           Participación especial de la
           {' '}
           <i>Banda Sinfónica de Salamanca</i>
           {' '}
           del programa Vientos Musicales del
           {' '}
-          <i> Instituto Estatal de la Cultura de Guanajuato</i>
+          <i> Instituto Estatal de la Cultura de Guanajuato.</i>
+          <br />
+          <br />
+          Profesores:
+          {' '}
+          <i>
+          Rosario Alhelí Vera Paredón,
+          María del Rayo López Palizada,
+          Alejandro Alcázar López,
+          Heberth Israel Gómez Morales
+          </i>
+          <br />
+          Intérpretes:
+          {' '}
+          <i>
+          Ana Laura Montiel Ortega,
+          Dafne Elisa Izquierdo Calderón,
+          Emilia Alanís Oviedo,
+          Sebastián Alanís Oviedo,
+          Dana Patricia Meneses Duarte,
+          Citlali Ollín Quezada Juárez,
+          Judith Moreno Villagómez,
+          Erick Martínez García,
+          Diego Ernesto Orozco Medrano,
+          Karol Mendiola González,
+          Antonia Betsabé Dzul Vázquez,
+          Sofía Margarita Salmerón González,
+          Valeria Abigail Salmerón González,
+          Diego Alonso Salmerón González,
+          Marcela Danae Ayala Arroyo,
+          Santiago Elías Ayala Arroyo
+          </i>
           <br />
           <br />
           Personal de apoyo en el Centro de las Artes de Guanajuato:

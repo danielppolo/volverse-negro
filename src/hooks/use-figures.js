@@ -8,12 +8,14 @@ const useFigures = (ready) => {
 
   useEffect(() => {
     const handleClick = (event) => {
+      if (['IMG', 'VIDEO'].includes(event.target.tagName)) return
       const figures = Array.from(document.querySelectorAll('.Figure.inactive'))
       const i = Math.floor(Math.random() * (figures.length - 1))
       const selected = figures[i]
       selected.classList.toggle('active')
       selected.classList.toggle('inactive')
-      const size = (Math.floor(Math.random() * 200)) + 200
+      const e = (typeof window !== 'undefined' && window.innerWidth > 720) ? 200 : 100
+      const size = (Math.floor(Math.random() * e)) + e
       selected.style.width = `${size}px`
       selected.style.transform = `rotate(${(Math.floor(Math.random() * 30)) * (Math.random() > 0.5 ? -1 : 1)}deg) translate(-50%, -50%)`
       selected.style.left = `${event.pageX}px`

@@ -9,6 +9,9 @@ const Container = styled.div`
   height: 80vh;
   margin: 10vh 0;
   width: 100vw;
+  @media (max-width: 720px) {
+    height: auto;
+  }
   > div {
     max-width: 70vw; 
   }
@@ -17,9 +20,12 @@ const Container = styled.div`
 const CollectionStyled = styled.div`
   height: 80vh;
   overflow-y: hidden;
-   &::-webkit-scrollbar {
-      display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 720px) {
+    height: 50vh;
+  }
  .collection-container {
     margin: 15vh 0;
     width: 50vh; // Height
@@ -57,7 +63,10 @@ function Collection({ src, alt }) {
 
   return (
     <CollectionStyled size={src.length}>
-      <div className="collection-container" data-cursor="scroll">
+      <div
+        className="collection-container"
+        data-cursor="desplazar"
+      >
         {
         src && src.map((e) => {
           const offset = Math.floor(Math.random() * 60) + 20

@@ -12,7 +12,7 @@ function Image({
 }) {
   return (
     <Parallax
-      className={overflow && 'overflow-hidden'}
+      className={overflow ? 'overflow-hidden image-container' : 'image-container'}
       tagOuter="div"
       styleOuter={{
         width,
