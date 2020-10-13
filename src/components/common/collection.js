@@ -48,6 +48,15 @@ const CollectionStyled = styled.div`
       /* max-height: 300px; */
     }
  }
+ @media (max-width: 720px) {
+    .collection-container {
+      width: 100vw;
+      height: 100vw !important;
+      img {
+        height: 80vw !important;
+      }
+    }
+  }
 `
 function Collection({ src, alt, vertical }) {
   if (src.length === 1) {
