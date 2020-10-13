@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAX() {
+function FragmentAX(props) {
   return (
-    <Fragment pos="x">
+    <Fragment pos="x" {...props}>
       <p>
 Desde la azotea del Convento, se ven las chimeneas de la Refinería. Como un
 bosque de metales preciosos y humos que se elevan. Cualquier mirada es indiferente

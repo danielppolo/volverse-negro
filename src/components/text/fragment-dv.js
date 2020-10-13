@@ -1,9 +1,9 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentDV() {
+function FragmentDV(props) {
   return (
-    <Fragment pos="vvvv">
+    <Fragment pos="vvvv" {...props}>
       <p>
   Petardos y también trompetas
   Vendedores y carros

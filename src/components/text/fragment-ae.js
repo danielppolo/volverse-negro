@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAE() {
+function FragmentAE(props) {
   return (
-    <Fragment pos="e">
+    <Fragment pos="e" {...props}>
       <p>
       Un valle inquietante es un lugar donde los humanos conviven con los robots y los
       muertos. “El principio sostiene que la respuesta emocional de un humano hacia una

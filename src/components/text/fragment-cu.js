@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCU() {
+function FragmentCU(props) {
   return (
-    <Fragment pos="uuu">
+    <Fragment pos="uuu" {...props}>
       <p>
 Viene al caso recordar los corderos que balan en los valles. Viene al caso, recordar
 la extrañeza y la inquietud. Los androides y el pulso de las manos articuladas. El

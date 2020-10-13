@@ -1,9 +1,9 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentDT() {
+function FragmentDT(props) {
   return (
-    <Fragment pos="tttt">
+    <Fragment pos="tttt" {...props}>
       <p>
       En Salamanca usted puede comprar pequeños nacimientos de colores difusos y
 rostros deslumbrados. Entre los animales, encontrará ovejas. Reyes del Oriente.

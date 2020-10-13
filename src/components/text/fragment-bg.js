@@ -6,9 +6,9 @@ const ImageStyled = styled.img`
   width: 50%;
 `
 
-function FragmentBG() {
+function FragmentBG(props) {
   return (
-    <Fragment pos="gg">
+    <Fragment pos="gg" {...props}>
       <ImageStyled
         src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image2.jpg"
         alt="Señora de la abejas"

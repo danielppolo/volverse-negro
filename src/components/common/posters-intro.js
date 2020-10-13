@@ -3,7 +3,7 @@ import { Parallax } from 'react-scroll-parallax'
 import styled from 'styled-components'
 
 const MusiciansIntroStyled = styled.div`
-  height: 70vh;
+  height: 60vh;
   width: 100%;
   position: relative;
   padding: 20px;
@@ -11,6 +11,7 @@ const MusiciansIntroStyled = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   font-size: 1.2rem;
+  padding-bottom: 6rem;
 
   .que {
     font-size: 1.5rem;
@@ -20,19 +21,20 @@ const MusiciansIntroStyled = styled.div`
     font-style: italic;
   }
   @media (max-width: 720px) {
-    height: 30vh;
+    height: 50vh;
   }
 `
 
 function MusiciansIntro({ props }) {
   return (
     <Parallax
-      y={[-20, 20]}
+      y={[-10, 20]}
     >
       <MusiciansIntroStyled>
-        <i>
-        Cada día a las 18:00hrs, integrantes de la Banda Sinfónica de Salamanca salen a sus azoteas, patios o ventanas, toman aire y soplan, su aliento hace sonar un instrumento musical.
-        </i>
+        <i>Carteles Volverse negro, en la ciudad.</i>
+        <p>
+        En los espacios públicos y la barda que rodea a la refinería de Salamanca, están dispuestos una serie de carteles que proponen múltiples tentativas de lectura en torno a la figura de un niño sentado en la cornisa superior del Centro de las Artes de Guanajuato, ante el enigma de su aparición.
+        </p>
       </MusiciansIntroStyled>
     </Parallax>
   )

@@ -1,10 +1,10 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentDD() {
+function FragmentDD(props) {
   return (
-    <Fragment pos="dddd">
-      <p>
+    <Fragment pos="dddd" {...props}>
+      <p className="interact interactive" id="anchor-zoom-c">
       Aire envasado. Humo envasado. Dolor envasado. Ríos, corrientes y ventiscas
 envasadas. Angustia y alegría. Aire de París. Canto de pájaros, zumbido de abejas.
 Flautas. Salamanca envasada. Refinería envasada. La Palabra de Dios envasada.

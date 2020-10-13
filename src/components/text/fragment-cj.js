@@ -7,9 +7,9 @@ const ImageStyled = styled.img`
   mix-blend-mode: multiply;
 `
 
-function FragmentCJ() {
+function FragmentCJ(props) {
   return (
-    <Fragment pos="jjj">
+    <Fragment pos="jjj" {...props}>
       <ImageStyled
         src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image7.jpg"
         alt="Propiedad Federal"

@@ -3,6 +3,7 @@ import React, {
 } from 'react'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import '../index.css'
+import { Element } from 'react-scroll'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import useFigures from '../hooks/use-figures'
@@ -168,7 +169,8 @@ import PajarosCEARG from '../components/collections/collection-w'
 import Bayas from '../components/collections/collection-x'
 import NinoPanalito from '../components/collections/collection-y'
 import PajarosCupula from '../components/collections/collection-z'
-
+import Posters from '../components/common/posters'
+import PostersIntro from '../components/common/posters-intro'
 import Musicians from '../components/common/musicians'
 import MusiciansIntro from '../components/common/musicians-intro'
 import Cartography from '../components/common/cartography'
@@ -183,15 +185,16 @@ import Row from '../components/common/row'
 import Column from '../components/common/column'
 import Empty from '../components/common/empty'
 import Title from '../components/common/title'
-import Fragment from '../components/common/fragment'
 import useMediaLoaded from '../hooks/use-media-loaded'
 import useTracks from '../hooks/use-tracks'
 import Welcome from '../components/common/welcome'
+import Playback from '../components/common/playback'
 import ZoomA from '../components/zooms/zoom-a'
 import ZoomB from '../components/zooms/zoom-b'
 import ZoomC from '../components/zooms/zoom-c'
 import ZoomD from '../components/zooms/zoom-d'
 import useStreaming from '../hooks/use-streaming'
+import FragmentDF from '../components/text/fragment-df'
 
 const IndexPage = () => {
   const [ready, setReady] = useState(false)
@@ -203,9 +206,7 @@ const IndexPage = () => {
     'streaming-3',
     'streaming-4',
   ], ready)
-  const {
-    current, next, previous, playback,
-  } = useTracks()
+  const { current, playback, active } = useTracks()
   useAmbientSound((playing || current))
   const stamp = useFigures(ready)
 
@@ -218,6 +219,7 @@ const IndexPage = () => {
     [],
   )
 
+  console.log(current)
   return (
     <ParallaxProvider>
       <Layout>
@@ -239,9 +241,9 @@ const IndexPage = () => {
             <Title>El valle inquietante</Title>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 1} onClick={() => playback(1)}>
-                  <FragmentAA />
-                </Fragment>
+                <Element name="track-1-0">
+                  <FragmentAA active={current === 1} onClick={() => playback(1)} />
+                </Element>
               </Column>
               <Column grow>
                 <VideoAA onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -249,9 +251,9 @@ const IndexPage = () => {
             </Row>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 1} onClick={() => playback(1)}>
-                  <FragmentAB />
-                </Fragment>
+                <Element name="track-1-83">
+                  <FragmentAB active={current === 1} onClick={() => playback(1, 83)} />
+                </Element>
               </Column>
               <Column grow>
                 <VideoAB onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -262,10 +264,10 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 1} onClick={() => playback(1)}>
-                  <FragmentAC />
-                  <FragmentAD />
-                </Fragment>
+                <Element name="track-1-147">
+                  <FragmentAC active={current === 1} onClick={() => playback(1, 147)} />
+                  <FragmentAD active={current === 1} onClick={() => playback(1, 147)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAC onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -276,9 +278,9 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 1} onClick={() => playback(1)}>
-                  <FragmentAE />
-                </Fragment>
+                <Element name="track-1-204">
+                  <FragmentAE active={current === 1} onClick={() => playback(1, 204)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAD onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -289,13 +291,13 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 2} onClick={() => playback(2)}>
-                  <FragmentAF />
-                  <FragmentAG />
-                  <FragmentAH />
-                  <FragmentAI />
-                  <FragmentAJ />
-                </Fragment>
+                <Element name="track-2-0">
+                  <FragmentAF active={current === 2} onClick={() => playback(2)} />
+                  <FragmentAG active={current === 2} onClick={() => playback(2)} />
+                  <FragmentAH active={current === 2} onClick={() => playback(2)} />
+                  <FragmentAI active={current === 2} onClick={() => playback(2)} />
+                  <FragmentAJ active={current === 2} onClick={() => playback(2)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAE onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -306,13 +308,13 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 2} onClick={() => playback(2)}>
-                  <FragmentAL />
-                  <FragmentAM />
-                  <FragmentAN />
-                  <FragmentAQ />
-                  <FragmentAR />
-                </Fragment>
+                <Element name="track-2-39">
+                  <FragmentAL active={current === 2} onClick={() => playback(2, 39)} />
+                  <FragmentAM active={current === 2} onClick={() => playback(2, 39)} />
+                  <FragmentAN active={current === 2} onClick={() => playback(2, 39)} />
+                  <FragmentAQ active={current === 2} onClick={() => playback(2, 39)} />
+                  <FragmentAR active={current === 2} onClick={() => playback(2, 39)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAF onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -323,12 +325,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 2} onClick={() => playback(2)}>
-                  <FragmentAR />
-                  <FragmentAS />
-                  <FragmentAT />
-                  <FragmentAV />
-                </Fragment>
+                <Element name="track-2-69">
+                  <FragmentAR active={current === 2} onClick={() => playback(2, 69)} />
+                  <FragmentAS active={current === 2} onClick={() => playback(2, 69)} />
+                  <FragmentAT active={current === 2} onClick={() => playback(2, 69)} />
+                  <FragmentAV active={current === 2} onClick={() => playback(2, 69)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAG onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -336,12 +338,12 @@ const IndexPage = () => {
             </Row>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 2} onClick={() => playback(2)}>
-                  <FragmentAW />
-                  <FragmentAX />
-                  <FragmentAY />
-                  <FragmentAZ />
-                </Fragment>
+                <Element name="track-2-128">
+                  <FragmentAW active={current === 2} onClick={() => playback(2, 128)} />
+                  <FragmentAX active={current === 2} onClick={() => playback(2, 128)} />
+                  <FragmentAY active={current === 2} onClick={() => playback(2, 128)} />
+                  <FragmentAZ active={current === 2} onClick={() => playback(2, 128)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAH onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -355,12 +357,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 3} onClick={() => playback(3)}>
-                  <FragmentBA />
-                  <FragmentBB />
-                  <FragmentBC />
-                  <FragmentBD />
-                </Fragment>
+                <Element name="track-3-0">
+                  <FragmentBA active={current === 3} onClick={() => playback(3)} />
+                  <FragmentBB active={current === 3} onClick={() => playback(3)} />
+                  <FragmentBC active={current === 3} onClick={() => playback(3)} />
+                  <FragmentBD active={current === 3} onClick={() => playback(3)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAI onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -371,12 +373,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 3} onClick={() => playback(3)}>
-                  <FragmentBE />
-                  <FragmentBF />
-                  <FragmentBG />
-                  <FragmentBH />
-                </Fragment>
+                <Element name="track-3-92">
+                  <FragmentBE active={current === 3} onClick={() => playback(3, 92)} />
+                  <FragmentBF active={current === 3} onClick={() => playback(3, 92)} />
+                  <FragmentBG active={current === 3} onClick={() => playback(3, 92)} />
+                  <FragmentBH active={current === 3} onClick={() => playback(3, 92)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAJ onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -387,12 +389,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 3} onClick={() => playback(3)}>
-                  <FragmentBI />
-                  <FragmentBJ />
-                  <FragmentBK />
-                  <FragmentBL />
-                </Fragment>
+                <Element name="track-3-122">
+                  <FragmentBI active={current === 3} onClick={() => playback(3, 122)} />
+                  <FragmentBJ active={current === 3} onClick={() => playback(3, 122)} />
+                  <FragmentBK active={current === 3} onClick={() => playback(3, 122)} />
+                  <FragmentBL active={current === 3} onClick={() => playback(3, 122)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAK onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -403,12 +405,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 4} onClick={() => playback(4)}>
-                  <FragmentBO />
-                  <FragmentBP />
-                  <FragmentBQ />
-                  <FragmentBR />
-                </Fragment>
+                <Element name="track-4-0">
+                  <FragmentBO active={current === 4} onClick={() => playback(4)} />
+                  <FragmentBP active={current === 4} onClick={() => playback(4)} />
+                  <FragmentBQ active={current === 4} onClick={() => playback(4)} />
+                  <FragmentBR active={current === 4} onClick={() => playback(4)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAL onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -420,12 +422,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 4} onClick={() => playback(4)}>
-                  <FragmentBS />
-                  <FragmentBT />
-                  <FragmentBU />
-                  <FragmentBV />
-                </Fragment>
+                <Element name="track-4-98">
+                  <FragmentBS active={current === 4} onClick={() => playback(4, 98)} />
+                  <FragmentBT active={current === 4} onClick={() => playback(4, 98)} />
+                  <FragmentBU active={current === 4} onClick={() => playback(4, 98)} />
+                  <FragmentBV active={current === 4} onClick={() => playback(4, 98)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAN onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -437,12 +439,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 4} onClick={() => playback(4)}>
-                  <FragmentBW />
-                  <FragmentBX />
-                  <FragmentBY />
-                  <FragmentBZ />
-                </Fragment>
+                <Element name="track-4-175">
+                  <FragmentBW active={current === 4} onClick={() => playback(4, 175)} />
+                  <FragmentBX active={current === 4} onClick={() => playback(4, 175)} />
+                  <FragmentBY active={current === 4} onClick={() => playback(4, 175)} />
+                  <FragmentBZ active={current === 4} onClick={() => playback(4, 175)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAP onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -456,12 +458,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 5} onClick={() => playback(5)}>
-                  <FragmentCA />
-                  <FragmentCB />
-                  <FragmentCC />
-                  <FragmentCD />
-                </Fragment>
+                <Element name="track-5-0">
+                  <FragmentCA active={current === 5} onClick={() => playback(5)} />
+                  <FragmentCB active={current === 5} onClick={() => playback(5)} />
+                  <FragmentCC active={current === 5} onClick={() => playback(5)} />
+                  <FragmentCD active={current === 5} onClick={() => playback(5)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAQ onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -472,11 +474,11 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 5} onClick={() => playback(5)}>
-                  <FragmentCE />
-                  <FragmentCF />
-                  <FragmentCG />
-                </Fragment>
+                <Element name="track-5-57">
+                  <FragmentCE active={current === 5} onClick={() => playback(5, 57)} />
+                  <FragmentCF active={current === 5} onClick={() => playback(5, 57)} />
+                  <FragmentCG active={current === 5} onClick={() => playback(5, 57)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAR onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -487,13 +489,13 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 5} onClick={() => playback(5)}>
-                  <FragmentCH />
-                  <FragmentCI />
-                  <FragmentCJ />
-                  <FragmentCK />
-                  <FragmentCL />
-                </Fragment>
+                <Element name="track-5-111">
+                  <FragmentCH active={current === 5} onClick={() => playback(5, 111)} />
+                  <FragmentCI active={current === 5} onClick={() => playback(5, 111)} />
+                  <FragmentCJ active={current === 5} onClick={() => playback(5, 111)} />
+                  <FragmentCK active={current === 5} onClick={() => playback(5, 111)} />
+                  <FragmentCL active={current === 5} onClick={() => playback(5, 111)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAS onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -504,10 +506,10 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 5} onClick={() => playback(5)}>
-                  <FragmentCM />
-                  <FragmentCN />
-                </Fragment>
+                <Element name="track-5-125">
+                  <FragmentCM active={current === 5} onClick={() => playback(5, 125)} />
+                  <FragmentCN active={current === 5} onClick={() => playback(5, 125)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAT onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -518,12 +520,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 6} onClick={() => playback(6)}>
-                  <FragmentCO />
-                  <FragmentCP />
-                  <FragmentCQ />
-                  <FragmentCR />
-                </Fragment>
+                <Element name="track-6-0">
+                  <FragmentCO active={current === 6} onClick={() => playback(6)} />
+                  <FragmentCP active={current === 6} onClick={() => playback(6)} />
+                  <FragmentCQ active={current === 6} onClick={() => playback(6)} />
+                  <FragmentCR active={current === 6} onClick={() => playback(6)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAU onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -533,13 +535,13 @@ const IndexPage = () => {
           <Aereo pos="17" />
           <Container>
             <Row>
-              <Column width={50} active={current === 6} onClick={() => playback(6)}>
-                <Fragment>
-                  <FragmentCS />
-                  <FragmentCT />
-                  <FragmentCU />
-                  <FragmentCV />
-                </Fragment>
+              <Column width={50}>
+                <Element name="track-6-132">
+                  <FragmentCS active={current === 6} onClick={() => playback(6, 132)} />
+                  <FragmentCT active={current === 6} onClick={() => playback(6, 132)} />
+                  <FragmentCU active={current === 6} onClick={() => playback(6, 132)} />
+                  <FragmentCV active={current === 6} onClick={() => playback(6, 132)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAV onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -550,11 +552,11 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 6} onClick={() => playback(6)}>
-                  <FragmentCW />
-                  <FragmentCX />
-                  <FragmentCY />
-                </Fragment>
+                <Element name="track-6-167">
+                  <FragmentCW active={current === 6} onClick={() => playback(6, 167)} />
+                  <FragmentCX active={current === 6} onClick={() => playback(6, 167)} />
+                  <FragmentCY active={current === 6} onClick={() => playback(6, 167)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAW onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -568,13 +570,13 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 2} onClick={() => playback(2)}>
-                  <FragmentCZ />
-                  <FragmentDA />
-                  <FragmentDB />
-                  <FragmentDC />
-                  <FragmentDD />
-                </Fragment>
+                <Element name="track-7-0">
+                  <FragmentCZ active={current === 7} onClick={() => playback(7)} />
+                  <FragmentDA active={current === 7} onClick={() => playback(7)} />
+                  <FragmentDB active={current === 7} onClick={() => playback(7)} />
+                  <FragmentDC active={current === 7} onClick={() => playback(7)} />
+                  <FragmentDD active={current === 7} onClick={() => playback(7)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAX onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -585,12 +587,13 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 7} onClick={() => playback(7)}>
-                  <FragmentDE />
-                  <FragmentDG />
-                  <FragmentDH />
-                  <FragmentDI />
-                </Fragment>
+                <Element name="track-7-68">
+                  <FragmentDE active={current === 7} onClick={() => playback(7, 68)} />
+                  <FragmentDF active={current === 7} onClick={() => playback(7, 68)} />
+                  <FragmentDG active={current === 7} onClick={() => playback(7, 68)} />
+                  <FragmentDH active={current === 7} onClick={() => playback(7, 68)} />
+                  <FragmentDI active={current === 7} onClick={() => playback(7, 68)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAY onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -601,9 +604,9 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 7} onClick={() => playback(7)}>
-                  <FragmentDJ />
-                </Fragment>
+                <Element name="track-7-149">
+                  <FragmentDJ active={current === 7} onClick={() => playback(7, 149)} />
+                </Element>
               </Column>
               <Column>
                 <VideoAZ onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -614,11 +617,11 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 7} onClick={() => playback(7)}>
-                  <FragmentDK />
-                  <FragmentDL />
-                  <FragmentDM />
-                </Fragment>
+                <Element name="track-7-193">
+                  <FragmentDK active={current === 7} onClick={() => playback(7, 193)} />
+                  <FragmentDL active={current === 7} onClick={() => playback(7, 193)} />
+                  <FragmentDM active={current === 7} onClick={() => playback(7, 193)} />
+                </Element>
               </Column>
               <Column>
                 <VideoBA onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -629,10 +632,10 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 8} onClick={() => playback(8)}>
-                  <FragmentDN />
-                  <FragmentDO />
-                </Fragment>
+                <Element name="track-8-0">
+                  <FragmentDN active={current === 8} onClick={() => playback(8)} />
+                  <FragmentDO active={current === 8} onClick={() => playback(8)} />
+                </Element>
               </Column>
               <Column>
                 <VideoBB onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -643,12 +646,12 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 8} onClick={() => playback(8)}>
-                  <FragmentDP />
-                  <FragmentDQ />
-                  <FragmentDR />
-                  <FragmentDS />
-                </Fragment>
+                <Element name="track-8-51">
+                  <FragmentDP active={current === 8} onClick={() => playback(8, 51)} />
+                  <FragmentDQ active={current === 8} onClick={() => playback(8, 51)} />
+                  <FragmentDR active={current === 8} onClick={() => playback(8, 51)} />
+                  <FragmentDS active={current === 8} onClick={() => playback(8, 51)} />
+                </Element>
               </Column>
               <Column>
                 <VideoBC onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -659,10 +662,10 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 6} onClick={() => playback(6)}>
-                  <FragmentDT />
-                  <FragmentDU />
-                </Fragment>
+                <Element name="track-8-120">
+                  <FragmentDT active={current === 8} onClick={() => playback(8, 120)} />
+                  <FragmentDU active={current === 8} onClick={() => playback(8, 120)} />
+                </Element>
               </Column>
               <Column>
                 <VideoBD onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -673,9 +676,9 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 8} onClick={() => playback(8)}>
-                  <FragmentDV />
-                </Fragment>
+                <Element name="track-8-133">
+                  <FragmentDV active={current === 8} onClick={() => playback(8, 133)} />
+                </Element>
               </Column>
               <Column>
                 <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -684,10 +687,10 @@ const IndexPage = () => {
             </Row>
             <Row>
               <Column width={50}>
-                <Fragment active={current === 8} onClick={() => playback(8)}>
-                  <FragmentDW />
-                  <FragmentDX />
-                </Fragment>
+                <Element name="track-8-133">
+                  <FragmentDW active={current === 8} onClick={() => playback(8, 133)} />
+                  <FragmentDX active={current === 8} onClick={() => playback(8, 133)} />
+                </Element>
               </Column>
               <Column>
                 <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
@@ -699,6 +702,10 @@ const IndexPage = () => {
         <div>
           <MusiciansIntro />
           <Musicians />
+        </div>
+        <div>
+          <PostersIntro />
+          <Posters />
         </div>
         <Figures />
         <ZoomA
@@ -724,6 +731,9 @@ const IndexPage = () => {
         {
           ready && <Cursor />
         }
+        {/* {
+          current && <Playback onClick={playback} active={active} />
+        } */}
       </Layout>
     </ParallaxProvider>
   )

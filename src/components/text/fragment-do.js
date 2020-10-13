@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentDO() {
+function FragmentDO(props) {
   return (
-    <Fragment pos="oooo">
+    <Fragment pos="oooo" {...props}>
       <p>
 Maximiliano enferma en Salamanca y es curado con sanguijuelas. Vuelve a
 enfermar en una ciudad cercana, pero las sanguijuelas locales no lo sanan. Mandan

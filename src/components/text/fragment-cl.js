@@ -8,9 +8,9 @@ const ImageStyled = styled.img`
 `
 
 
-function FragmentCL() {
+function FragmentCL(props) {
   return (
-    <Fragment pos="lll">
+    <Fragment pos="lll" {...props}>
       <ImageStyled
         src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image6.jpg"
         alt="Camino de terracería"

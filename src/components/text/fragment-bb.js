@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBB() {
+function FragmentBB(props) {
   return (
-    <Fragment pos="bb">
+    <Fragment pos="bb" {...props}>
       <p>
 En esta gráfica no hay personas, pero se distribuyen los cuerpos de distintas
 maneras: cuerpos vivos o muertos; cuerpos biológicos o maquínicos; cuerpos de

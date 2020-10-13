@@ -1,9 +1,9 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentAB() {
+function FragmentAB(props) {
   return (
-    <Fragment pos="b">
+    <Fragment pos="b" {...props}>
       <p>
         Los evangélicos predicaban sobre un templete, al atardecer, en Salamanca. La plaza
     estaba vacía, pero en el aire sus voces temblaban con un viento suave y la

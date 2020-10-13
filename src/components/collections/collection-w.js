@@ -4,6 +4,7 @@ import Collection from '../common/collection'
 function CollectionW({ props }) {
   return (
     <Collection
+      vertical
       alt="Pájaros del Centro de Artes de Guanajuato"
       src={[
         'https://volverse-negro.s3.us-east-2.amazonaws.com/images/22.+p%C3%A1jaros+Cearg43.jpg',

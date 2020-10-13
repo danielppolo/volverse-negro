@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBY() {
+function FragmentBY(props) {
   return (
-    <Fragment pos="yy">
+    <Fragment pos="yy" {...props}>
       <p>
       La última pintura del siglo. Después, un silencio monocromo. Los rollos del Mar
 Muerto. Interpretaciones pendientes del Torá. Un cuadro escueto y una visión solar.

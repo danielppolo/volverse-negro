@@ -6,7 +6,7 @@ function VideoAA(props) {
   return (
     <Video
       style={{
-        marginTop: '8rem',
+        marginTop: '4rem',
       }}
       y={[-20, 20]}
       poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+01.compressed_2.compressed.jpg"

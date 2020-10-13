@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAW() {
+function FragmentAW(props) {
   return (
-    <Fragment pos="w">
+    <Fragment pos="w" {...props}>
       <p>
 Las abejas predicarán en torno al Muñeco. Como los evangélicos en la plaza, el
 Muñeco presenciará la Nada.

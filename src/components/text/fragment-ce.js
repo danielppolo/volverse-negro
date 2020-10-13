@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCE() {
+function FragmentCE(props) {
   return (
-    <Fragment pos="eee">
+    <Fragment pos="eee" {...props}>
       <p>
 En Salamanca perdí la conciencia y desperté a las horas, adolorido y
 desconcertado. En una convulsión todo es negro, pero Cristo no aparece. Negro el

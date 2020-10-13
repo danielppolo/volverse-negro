@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCV() {
+function FragmentCV(props) {
   return (
-    <Fragment pos="vvv">
+    <Fragment pos="vvv" {...props}>
       <p>
 En el ex Convento, un coro de niños. Sonidos secuenciales: inspiración y
 expiración. Un verbo para los pulmones y la garganta, que sopla aquello que nunca

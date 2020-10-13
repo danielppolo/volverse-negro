@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCB() {
+function FragmentCB(props) {
   return (
-    <Fragment pos="bbb">
+    <Fragment pos="bbb" {...props}>
       <p>
 El que agoniza, muere. El que muere, tal vez resucite. Pero en ese orden: 1, 2, 3.
 Hay muertes sin agonías, pero no resurrecciones sin muerte. Existen agonías larga y

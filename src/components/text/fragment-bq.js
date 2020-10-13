@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBQ() {
+function FragmentBQ(props) {
   return (
-    <Fragment pos="qq">
+    <Fragment pos="qq" {...props}>
       <p>
 El Caballo era un regalo y también la derrota.
       </p>

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBR() {
+function FragmentBR(props) {
   return (
-    <Fragment pos="rr">
+    <Fragment pos="rr" {...props}>
       <p>
 El Muñeco será una Esfinge que/ desde lo alto de una azotea/ pregunte a los
 transeúntes: ¿qué sucederá mañana cuando los animales despierten sumergidos en

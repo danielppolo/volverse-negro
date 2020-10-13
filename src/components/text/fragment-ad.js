@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAD() {
+function FragmentAD(props) {
   return (
-    <Fragment pos="d">
+    <Fragment pos="d" {...props}>
       <p>
         Necesitamos cuerdas que nos saquen del abismo, dice Donna Haraway (bióloga y
 filósofa). Su perra se llama Cayanne y ella dice que también escribe. ¿Cuál será la

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBA() {
+function FragmentBA(props) {
   return (
-    <Fragment pos="aa">
+    <Fragment pos="aa" {...props}>
       <p>
 “La gráfica de las acciones de las personas se complica mediante acciones
 fallidas” (Brecht). Teatro Ojo construye un Muñeco y lo abandona en los techos de

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCF() {
+function FragmentCF(props) {
   return (
-    <Fragment pos="fff">
+    <Fragment pos="fff" {...props}>
       <p>
 Las llamas de las Chimeneas son fogatas que gigantes friolentos encendieron por
 la noche.

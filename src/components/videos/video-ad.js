@@ -10,8 +10,8 @@ function VideoAD(props) {
         width: '80%',
         alignSelf: 'flex-start',
       }}
-      y={[-40, 40]}
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+04.compressed_1.compressed.jpg"
+      y={[0, 20]}
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+04.compressed_1.compressed.mp4"
       poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+04.compressed_1.compressed.jpg"
       {...props}
     />

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBT() {
+function FragmentBT(props) {
   return (
-    <Fragment pos="tt">
+    <Fragment pos="tt" {...props}>
       <p>
 “En 1900, Antonio empezó a trabajar con un fotógrafo alemán, Juan Kurt (J. C.
 
