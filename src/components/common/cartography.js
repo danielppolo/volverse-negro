@@ -27,12 +27,11 @@ const Cartography = () => (
       src="https://volverse-negro.s3.us-east-2.amazonaws.com/images/cartography.jpg"
       alt="Cartografía"
     />
-    {/* TODO: Update picture with high-res */}
-    {/* <img
+    <img
       className="map-overlay"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/stills/CARTEL+5b.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/images/cartography-overlay.jpg"
       alt="Cartografía"
-    /> */}
+    />
   </MapStyled>
 )
 

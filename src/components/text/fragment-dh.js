@@ -5,7 +5,7 @@ import Fragment from '../common/fragment'
 function FragmentDH(props) {
   return (
     <Fragment pos="hhhh" {...props}>
-      <p>
+      <p className="interact interactive" id="anchor-zoom-d">
 Salamanca: agonía humeante y autómatas.
       </p>
     </Fragment>
