@@ -12,7 +12,7 @@ function FragmentBW() {
   return (
     <Fragment pos="ww">
       <ImageStyled
-        src="https://res.cloudinary.com/teatroojo/image/upload/v1602443867/volverse_negro/images-text/image4_tliava.png"
+        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image4.jpg"
         alt="Cuadrado negro sobre fondo blanco"
       />
     </Fragment>

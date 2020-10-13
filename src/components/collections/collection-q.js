@@ -6,9 +6,9 @@ function CollectionQ({ props }) {
     <Collection
       alt="Campanario"
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/16._campanario20_t2patp.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/16._campanario51_v026wp.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/16._campanario52_qpezrl.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/16.+campanario20.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/16.+campanario52.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/16.+campanario51.jpg',
       ]}
     />
   )

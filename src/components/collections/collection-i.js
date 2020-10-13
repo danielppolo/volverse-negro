@@ -5,7 +5,7 @@ function CollectionI({ props }) {
   return (
     <Collection
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487040/volverse_negro/images/8._palomas_refiner%C3%ADa10_oe5sua.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/8.+palomas+refiner%C3%ADa10.jpg',
       ]}
       alt="Palomas"
     />

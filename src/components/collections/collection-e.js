@@ -5,7 +5,7 @@ function CollectionE({ props }) {
   return (
     <Collection
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/5._ni%C3%B1oturbina69_lqmss0.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/5.+ni%C3%B1oturbina69.jpg',
       ]}
       alt="Niño turbina"
     />

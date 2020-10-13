@@ -9,7 +9,8 @@ function VideoAC(props) {
         marginTop: '4rem',
       }}
       y={[-30, 30]}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310506/volverse_negro/video/volversenegro_03.compressed_1.compressed_wwm6fw.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+03.compressed_1.compressed.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+03.compressed_1.compressed.mp4"
       {...props}
     />
   )

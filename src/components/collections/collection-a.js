@@ -5,7 +5,7 @@ function CollectionA({ props }) {
   return (
     <Collection
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602130465/volverse_negro/images/1._refiner%C3%ADa58_gxtoh6.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/1.+refiner%C3%ADa58.jpg',
       ]}
       alt="Refinería"
     />

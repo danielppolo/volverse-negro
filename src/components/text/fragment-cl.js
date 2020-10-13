@@ -11,7 +11,10 @@ const ImageStyled = styled.img`
 function FragmentCL() {
   return (
     <Fragment pos="lll">
-      <ImageStyled src="https://res.cloudinary.com/teatroojo/image/upload/v1602443867/volverse_negro/images-text/image6_joiplq.jpg" alt="Camino de terracería" />
+      <ImageStyled
+        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image6.jpg"
+        alt="Camino de terracería"
+      />
     </Fragment>
   )
 }

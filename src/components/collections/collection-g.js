@@ -5,8 +5,8 @@ function CollectionG({ props }) {
   return (
     <Collection
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487039/volverse_negro/images/6._mano12_lvqm3n.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487039/volverse_negro/images/6._mano31_esktou.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/6.+mano12.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/6.+mano31.jpg',
       ]}
       alt="Mano"
     />

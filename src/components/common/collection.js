@@ -68,7 +68,7 @@ function Collection({ src, alt }) {
               // offsetY={[offset * -1, offset]}
               src={e}
               alt={alt}
-              key={src}
+              key={e}
             />
           )
         })

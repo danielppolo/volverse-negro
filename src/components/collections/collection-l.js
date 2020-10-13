@@ -6,10 +6,10 @@ function CollectionL({ props }) {
     <Collection
       alt="Cera"
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487042/volverse_negro/images/11._cera28_xyszap.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487042/volverse_negro/images/11._cera29_genaq7.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487042/volverse_negro/images/11._cera30_xtvwwy.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487041/volverse_negro/images/11._cera7_yjhctw.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/11.+cera28.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/11.+cera29.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/11.+cera30.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/11.+cera7.jpg',
       ]}
     />
   )

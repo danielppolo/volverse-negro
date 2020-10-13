@@ -8,7 +8,7 @@ const VideoStyled = styled.video`
 `
 
 function Video({
-  src, onPlay, onPause, width, y, x, style,
+  src, onPlay, onPause, width, y, x, style, poster,
 }) {
   const video = useRef(null)
   const handleMouseEnter = () => {
@@ -31,6 +31,7 @@ function Video({
         src={src}
         preload="metadata"
         ref={video}
+        poster={poster}
         data-cursor="observar"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

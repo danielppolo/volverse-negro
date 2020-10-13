@@ -6,12 +6,12 @@ function CollectionD({ props }) {
     <Collection
       alt="Parvada"
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/4._parvadas14_xnthin.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/4._parvadas16_kruvxc.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/4._parvadas17_duqe6c.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/4._parvadas54_mu9m53.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/4._parvadas55_gvm00i.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/4._parvadas56_wingua.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/4.+parvadas14.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/4.+parvadas16.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/4.+parvadas17.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/4.+parvadas54.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/4.+parvadas55.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/4.+parvadas56.jpg',
       ]}
     />
   )

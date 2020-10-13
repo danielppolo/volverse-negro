@@ -5,7 +5,7 @@ function CollectionK({ props }) {
   return (
     <Collection
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487041/volverse_negro/images/10._cerro13_a6qkzs.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/10.+cerro13.jpg',
       ]}
       alt="Cerro"
     />
