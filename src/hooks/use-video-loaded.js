@@ -5,13 +5,13 @@ const useVideoLoaded = () => {
   useEffect(() => {
     const videos = Array.from(document.querySelectorAll('video'))
     const promises = videos.map(video => new Promise((resolve, reject) => {
-      video.addEventListener('loadeddata', (event) => {
-        console.log('Video loadeddata')
+      video.addEventListener('loadedmetadata', (event) => {
+        console.log('Video loadedmetadata')
         resolve(true)
       })
     }))
     Promise.all(promises).then((value) => {
-      console.log('Video loaded 🎉', value)
+      console.log('Videos loaded 🎉', value)
       setLoaded(true)
     })
   }, [])

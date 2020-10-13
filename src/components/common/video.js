@@ -29,7 +29,7 @@ function Video({
     >
       <VideoStyled
         src={src}
-        preload="none"
+        preload="metadata"
         ref={video}
         poster={poster}
         data-cursor="observar"

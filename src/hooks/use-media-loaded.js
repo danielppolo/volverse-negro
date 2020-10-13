@@ -3,7 +3,7 @@ import useImageLoaded from './use-image-loaded'
 import useFontLoaded from './use-font-loaded'
 
 const useMediaLoaded = () => {
-  const video = useVideoLoaded()
+  const video = true
   const image = useImageLoaded()
   const font = useFontLoaded()
 
