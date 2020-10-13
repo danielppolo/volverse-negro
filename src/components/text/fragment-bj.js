@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBJ() {
+function FragmentBJ(props) {
   return (
-    <Fragment pos="jj">
+    <Fragment pos="jj" {...props}>
       <p>
 El Muñeco será la flor más dulce/Un jardín para seres que vuelan//Una colmena
 desterrada/Un duelo zigzagueante///Quien no vuele como las abejas/Nunca sabrá lo

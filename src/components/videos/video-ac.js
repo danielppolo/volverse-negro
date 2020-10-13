@@ -6,9 +6,9 @@ function VideoAC(props) {
   return (
     <Video
       style={{
-        marginTop: '4rem',
+        marginTop: '2rem',
       }}
-      y={[-30, 30]}
+      y={[-20, 20]}
       poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+03.compressed_1.compressed.jpg"
       src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+03.compressed_1.compressed.mp4"
       {...props}

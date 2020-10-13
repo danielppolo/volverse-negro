@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBL() {
+function FragmentBL(props) {
   return (
-    <Fragment pos="ll">
+    <Fragment pos="ll" {...props}>
       <p>
       Señora, ¡excúsanos! No sabemos criar abejas. Construimos muñecos para ofrecer
 sacrificios a gestos inexistentes. Para ver (ver) la disolución de la cera (cera), un

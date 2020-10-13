@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { useEffect } from 'react'
+import { navigate } from 'gatsby'
 
-const Poster = () => {
+export default () => {
   useEffect(() => {
-    window.location.href = 'https://youtu.be/0iit6c3h-Qs'
+    navigate('/')
   }, [])
-  return (
-    <Layout>
-      <SEO title="Volverse negro" />
-    </Layout>
-  )
+  return null
 }
-
-export default Poster

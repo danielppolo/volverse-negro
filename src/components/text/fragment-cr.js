@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCR() {
+function FragmentCR(props) {
   return (
-    <Fragment pos="rrr">
+    <Fragment pos="rrr" {...props}>
       <p>
 Jerusalem en las praderas, sin Templo y sin cruces, por donde corre el Judas que
 será sacrificado, entre la furia y el gozo. Un Judas Negro y un Cristo Negro. Cristo

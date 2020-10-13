@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAG() {
+function FragmentAG(props) {
   return (
-    <Fragment pos="g">
+    <Fragment pos="g" {...props}>
       <p>
 No se mencionan ovejas ni predicadores.
       </p>

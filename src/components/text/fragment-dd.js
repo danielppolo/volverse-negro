@@ -1,9 +1,9 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentDD() {
+function FragmentDD(props) {
   return (
-    <Fragment pos="dddd">
+    <Fragment pos="dddd" {...props}>
       <p>
       Aire envasado. Humo envasado. Dolor envasado. Ríos, corrientes y ventiscas
 envasadas. Angustia y alegría. Aire de París. Canto de pájaros, zumbido de abejas.

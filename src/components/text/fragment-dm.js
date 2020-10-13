@@ -6,9 +6,9 @@ const Text = styled.p`
   word-break: break-all; 
 `
 
-function FragmentDM() {
+function FragmentDM(props) {
   return (
-    <Fragment pos="mmmm">
+    <Fragment pos="mmmm" {...props}>
       <Text>
       negrosobrenegrosobrenegrosobrenegrosobrenegrosobrenegro
       </Text>

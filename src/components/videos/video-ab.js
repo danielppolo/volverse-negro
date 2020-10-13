@@ -5,7 +5,7 @@ function VideoAB(props) {
   return (
     <Video
       style={{
-        marginTop: ' 3rem',
+        marginTop: '3rem',
         width: '80%',
         alignSelf: 'center',
       }}

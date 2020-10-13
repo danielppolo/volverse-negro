@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAR() {
+function FragmentAR(props) {
   return (
-    <Fragment pos="r">
+    <Fragment pos="r" {...props}>
       <p>
 En el fuego de las chimeneas la tierra arde. Los fósiles se transforman en atmósferas.
 Disolución geológica de la prehistoria y una combustión incesante del tiempo.

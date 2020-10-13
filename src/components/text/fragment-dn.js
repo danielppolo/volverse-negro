@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentDN() {
+function FragmentDN(props) {
   return (
-    <Fragment pos="nnnn">
+    <Fragment pos="nnnn" {...props}>
       <p>
       El coro de niños toca flautas de plástico. La música acompaña a los trenes. El
 Muñeco escuchará sus cantos. Las abejas. La voz de Dios en la plaza: el aire de los

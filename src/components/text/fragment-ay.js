@@ -7,9 +7,9 @@ const ImageStyled = styled.img`
   mix-blend-mode: multiply;
 `
 
-function FragmentAY() {
+function FragmentAY(props) {
   return (
-    <Fragment pos="y">
+    <Fragment pos="y" {...props}>
       <ImageStyled
         src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image3.png"
         alt="Gráfica Valle Inquietante"

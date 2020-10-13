@@ -1,9 +1,9 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentBP() {
+function FragmentBP(props) {
   return (
-    <Fragment pos="pp">
+    <Fragment pos="pp" {...props}>
       <p>
 El Muñeco es un Caballo de Troya y su interior está repleto de abejas, que
 invadirán la ciudad y los campos y transfigurarán la Refinería en un gigantesco

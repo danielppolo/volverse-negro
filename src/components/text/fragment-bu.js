@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBU() {
+function FragmentBU(props) {
   return (
-    <Fragment pos="uu">
+    <Fragment pos="uu" {...props}>
       <p>
 Pan y circo/fotos y actores/teatro y abejas/soliloquios/el viento del
 invierno/sonidos de cosas que no existen/fotógrafos, Pátzcuaro/invasión

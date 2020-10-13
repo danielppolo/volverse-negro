@@ -26,7 +26,9 @@ const FragmentStyled = styled.div`
   }
 `
 
-function Fragment({ children, pos, ...otherProps }) {
+function Fragment({
+  children, pos, active, ...otherProps
+}) {
   return (
     <FragmentStyled {...otherProps} data-cursor="reproducir">
       {

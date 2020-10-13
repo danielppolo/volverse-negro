@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCW() {
+function FragmentCW(props) {
   return (
-    <Fragment pos="www">
+    <Fragment pos="www" {...props}>
       <p>
 Un día el cielo se cubrió de negro en Salamanca y la gente se ocultó en sus casas
 temiendo al aire que los perseguía. En agosto de 1915 empezó la guerra química,

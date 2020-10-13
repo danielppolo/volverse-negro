@@ -9,9 +9,9 @@ const ImageStyled = styled.img`
 `
 
 
-function FragmentDL() {
+function FragmentDL(props) {
   return (
-    <Fragment pos="llll">
+    <Fragment pos="llll" {...props}>
       <ImageStyled
         src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image8.jpg"
         alt="Pigmento Negro"

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCY() {
+function FragmentCY(props) {
   return (
-    <Fragment pos="yyy">
+    <Fragment pos="yyy" {...props}>
       <p>
 Abandonar la ciudad no es posible. ¿Dónde iríamos? Imaginen otros lugares.
 Otros Cristos y otras Abejas. Otras negruras. Cada quien encontrará su encierro y su

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBH() {
+function FragmentBH(props) {
   return (
-    <Fragment pos="hh">
+    <Fragment pos="hh" {...props}>
       <p>
       Señora de las Abejas:
       Zumba en torno al Muñeco de Cera,

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentDW() {
+function FragmentDW(props) {
   return (
-    <Fragment pos="wwww">
+    <Fragment pos="wwww" {...props}>
       <p>
 Señora de las Abejas: abre la puerta de las colmenas,
 te llevaremos miel en cántaros, iremos zumbando como

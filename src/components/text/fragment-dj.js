@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentDJ() {
+function FragmentDJ(props) {
   return (
-    <Fragment pos="jjjj">
+    <Fragment pos="jjjj" {...props}>
       <p>
 METODO Y APARATO PARA CONTROLAR LA PRODUCCION DE NEGRO DE HUMO. EL
 METODO COMPRENDE MEDIR A INTERVALOS ESPACIADOS AL MENOS UNA

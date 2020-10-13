@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentAC() {
+function FragmentAC(props) {
   return (
-    <Fragment pos="c">
+    <Fragment pos="c" {...props}>
       <p>
       Esa tarde todo parecía sereno: la plaza, la iglesia, la refinería, los trenes, Dios, su
 Palabra, los transeúntes, el aire opaco, las chimeneas y sus fuegos perpetuos, los

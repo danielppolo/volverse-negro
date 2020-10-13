@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentBC() {
+function FragmentBC(props) {
   return (
-    <Fragment pos="cc">
+    <Fragment pos="cc" {...props}>
       <p>
 Pequeño oratorio a los desiertos.
       </p>

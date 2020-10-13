@@ -1,9 +1,9 @@
 import React from 'react'
 import Fragment from '../common/fragment'
 
-function FragmentAA() {
+function FragmentAA(props) {
   return (
-    <Fragment pos="a">
+    <Fragment pos="a" {...props}>
       <p>
     Entrar o salir de un valle y sentir una inquietud intensa o apaciguada. Mirar las
       colinas o las montañas que rodean el valle y atisbar, con los ojos semicerrados, la

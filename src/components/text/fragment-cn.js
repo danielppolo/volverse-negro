@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCN() {
+function FragmentCN(props) {
   return (
-    <Fragment pos="nnn">
+    <Fragment pos="nnn" {...props}>
       <p>
 Entre un basural, se ve el humo de las chimeneas. Los cielos parecen abiertos. Las
 advertencias están escritas en las paredes, Lascaux de otras prehistorias, geologías

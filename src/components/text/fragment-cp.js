@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentCP() {
+function FragmentCP(props) {
   return (
-    <Fragment pos="ppp">
+    <Fragment pos="ppp" {...props}>
       <p>
 Las vallas son obstáculos. Las bayas son frutos. Una letra curva y otra hundida,
 eso es la diferencia entre el placer de las dulces bayas del campo y los trazos de las

@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentDI() {
+function FragmentDI(props) {
   return (
-    <Fragment pos="iiii">
+    <Fragment pos="iiii" {...props}>
       <p>
 Judas negro. Vieja esclavitud y serpientes. Historia y geología. Fiestas de Semana
 Santa.

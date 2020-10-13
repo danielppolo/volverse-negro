@@ -2,9 +2,9 @@ import React from 'react'
 import Fragment from '../common/fragment'
 
 
-function FragmentDK() {
+function FragmentDK(props) {
   return (
-    <Fragment pos="kkkk">
+    <Fragment pos="kkkk" {...props}>
       <p>
       Espejos humeantes:
         <br />

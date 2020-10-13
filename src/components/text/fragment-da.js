@@ -11,9 +11,9 @@ const ImageStyled = styled.img`
   }
 `
 
-function FragmentDA() {
+function FragmentDA(props) {
   return (
-    <Fragment pos="aaaa">
+    <Fragment pos="aaaa" {...props}>
       <ImageStyled
         src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image9.jpg"
         alt="Aire de Paris, Duchamp"

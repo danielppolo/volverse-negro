@@ -8,7 +8,7 @@ const useFigures = (ready) => {
 
   useEffect(() => {
     const handleClick = (event) => {
-      if (['IMG', 'VIDEO'].includes(event.target.tagName)) return
+      if (['IMG', 'VIDEO', 'P'].includes(event.target.tagName)) return
       const figures = Array.from(document.querySelectorAll('.Figure.inactive'))
       const i = Math.floor(Math.random() * (figures.length - 1))
       const selected = figures[i]
