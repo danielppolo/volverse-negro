@@ -4,7 +4,6 @@ import Fragment from '../common/fragment'
 
 const ImageStyled = styled.img`
   /* position: absolute; */
-  transform: rotate(10deg);
   margin-left: 50%;
   mix-blend-mode: multiply;
 `

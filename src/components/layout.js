@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import Credits from './common/credits'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,9 +23,8 @@ const Layout = ({ children }) => {
           marginTop: '2rem',
         }}
         >
-          © Una pieza de
-          {' '}
-          {data.site.siteMetadata?.author}
+          <Credits />
+          .
         </footer>
       </div>
     </>
