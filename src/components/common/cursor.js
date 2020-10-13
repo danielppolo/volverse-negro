@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import { useController } from 'react-scroll-parallax'
 import CursorClass from '../../utils/cursor'
 
 function Cursor() {
   const [cursor, setCursor] = useState(null)
   const [label, setLabel] = useState('estampa')
+  const { parallaxController } = useController()
+
   useEffect(() => {
+    // Update parallax effect when all elements are mounted.
+    parallaxController.update()
+
     const c = new CursorClass(document.querySelector('.cursor'))
     const interactiveItems = Array.from(document.querySelectorAll('.interact'))
     const items = Array.from(document.querySelectorAll('[data-cursor]'))
