@@ -6,15 +6,15 @@ function CollectionC({ props }) {
     <Collection
       alt="Maquinaria"
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487037/volverse_negro/images/3._maquinaria19_yhidgp.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487037/volverse_negro/images/3._maquinaria22_plaa7l.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487037/volverse_negro/images/3._maquinaria23_hl8pro.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/3._maquinaria38_mfabsx.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487037/volverse_negro/images/3._maquinaria39_e5oqrt.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487037/volverse_negro/images/3._maquinaria40_ikomlc.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487037/volverse_negro/images/3._maquinaria68_pozlmv.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/3._maquinaria71_e1sotz.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487038/volverse_negro/images/3._maquinaria72_xyh47k.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria19.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria22.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria23.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria38.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria39.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria40.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria68.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria71.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/3.+maquinaria72.jpg',
       ]}
     />
   )

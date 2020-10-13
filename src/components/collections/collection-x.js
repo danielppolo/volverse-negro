@@ -1,11 +1,10 @@
 import React from 'react'
 import Collection from '../common/collection'
-import Image from '../common/image'
 
 function CollectionX({ props }) {
   return (
     <Collection
-      src={['https://res.cloudinary.com/teatroojo/image/upload/v1602487034/volverse_negro/images/23._bayas62_j8xlyh.jpg']}
+      src={['https://volverse-negro.s3.us-east-2.amazonaws.com/images/23.+bayas62.jpg']}
       alt="Bayas"
     />
   )

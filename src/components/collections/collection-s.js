@@ -6,10 +6,10 @@ function CollectionS({ props }) {
     <Collection
       alt="Bichos"
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487045/volverse_negro/images/18._bichos11_g7qrsb.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/18._bichos1_rvnjq2.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/18._bichos3_jdrjzb.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487045/volverse_negro/images/18._bichos47_qqivqi.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/18.+bichos1.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/18.+bichos11.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/18.+bichos3.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/18.+bichos47.jpg',
       ]}
     />
   )

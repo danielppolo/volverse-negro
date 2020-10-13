@@ -3,7 +3,7 @@ import {
 } from 'react'
 
 const useAmbientSound = (secondary) => {
-  const [track] = useState((typeof Audio !== 'undefined') && new Audio('https://res.cloudinary.com/teatroojo/video/upload/v1602274769/volverse_negro/audio/Paisaje-Sonoro_Automata_Enrique-Mendoza_MASTER_bkqzw4.mp3'))
+  const [track] = useState((typeof Audio !== 'undefined') && new Audio('https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Paisaje-Sonoro_Automata_Enrique-Mendoza_MASTER.mp3'))
   const [interacted, setInteracted] = useState(false)
 
   useEffect(() => {

@@ -10,7 +10,8 @@ function VideoAF(props) {
         alignSelf: 'flex-end',
       }}
       y={[-20, 20]}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310536/volverse_negro/video/volversenegro_05.1.compressed_1.compressed_lf6o8p.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+05.1.compressed_1.compressed.compressed.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+05.1.compressed_1.compressed.compressed.mp4"
       {...props}
     />
   )

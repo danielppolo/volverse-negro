@@ -12,7 +12,10 @@ const ImageStyled = styled.img`
 function FragmentDA() {
   return (
     <Fragment pos="aaaa">
-      <ImageStyled src="https://res.cloudinary.com/teatroojo/image/upload/v1602443867/volverse_negro/images-text/image9_cuk0ky.jpg" alt="Aire de Paris, Duchamp" />
+      <ImageStyled
+        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image9.jpg"
+        alt="Aire de Paris, Duchamp"
+      />
     </Fragment>
   )
 }

@@ -12,7 +12,10 @@ const ImageStyled = styled.img`
 function FragmentDL() {
   return (
     <Fragment pos="llll">
-      <ImageStyled src="https://res.cloudinary.com/teatroojo/image/upload/v1602443867/volverse_negro/images-text/image8_gfpfe8.jpg" alt="Pigmento Negro" />
+      <ImageStyled
+        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image8.jpg"
+        alt="Pigmento Negro"
+      />
     </Fragment>
   )
 }

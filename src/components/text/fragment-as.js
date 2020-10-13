@@ -9,7 +9,7 @@ const ImageStyled = styled.img`
 function FragmentAS() {
   return (
     <Fragment pos="s">
-      <ImageStyled src="https://res.cloudinary.com/teatroojo/image/upload/v1602443867/volverse_negro/images-text/image1_mkbhft.png" alt="Gráfica de Valle Inquietante" />
+      <ImageStyled src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image1.png" alt="Gráfica de Valle Inquietante" />
     </Fragment>
   )
 }

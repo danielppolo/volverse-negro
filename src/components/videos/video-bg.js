@@ -10,7 +10,8 @@ function VideoBG(props) {
         width: '80%',
       }}
       y={[-40, 20]}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310465/volverse_negro/video/volversenegro_30.compressed_1.compressed_fqdm5q.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+30.compressed_1.compressed.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+30.compressed_1.compressed.mp4"
       {...props}
     />
   )

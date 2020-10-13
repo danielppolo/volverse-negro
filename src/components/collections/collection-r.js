@@ -4,7 +4,7 @@ import Collection from '../common/collection'
 function CollectionR({ props }) {
   return (
     <Collection
-      src={['https://res.cloudinary.com/teatroojo/image/upload/v1602487044/volverse_negro/images/17._t%C3%B3rtolas_palmeras18_tkauoc.jpg']}
+      src={['https://volverse-negro.s3.us-east-2.amazonaws.com/images/17.+t%C3%B3rtolas+palmeras18.jpg']}
       alt="Tórtolas"
     />
   )

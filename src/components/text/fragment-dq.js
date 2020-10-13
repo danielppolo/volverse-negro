@@ -11,7 +11,10 @@ const ImageStyled = styled.img`
 function FragmentDQ() {
   return (
     <Fragment pos="qqqq">
-      <ImageStyled src="https://res.cloudinary.com/teatroojo/image/upload/v1602443868/volverse_negro/images-text/image10_wpw9er.jpg" alt="Tabla de pigmentos negros" />
+      <ImageStyled
+        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image10.jpg"
+        alt="Tabla de pigmentos negros"
+      />
     </Fragment>
   )
 }

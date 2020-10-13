@@ -5,15 +5,14 @@ function useTracks() {
   const [tracks, setTracks] = useState([])
   const [active, setActive] = useState(false)
   const sources = [
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531617/volverse_negro/audio/Isla-1-Narracion-MASTER_r9eiyn.mp3',
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531619/volverse_negro/audio/Isla-2-Narracion-MASTER_jk9h5j.mp3',
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531617/volverse_negro/audio/Isla-3-Narracion-MASTER_fqcaco.mp3',
-    // PENDING
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531617/volverse_negro/audio/Isla-1-Narracion-MASTER_r9eiyn.mp3',
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531619/volverse_negro/audio/Isla-2-Narracion-MASTER_jk9h5j.mp3',
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531617/volverse_negro/audio/Isla-3-Narracion-MASTER_fqcaco.mp3',
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531617/volverse_negro/audio/Isla-1-Narracion-MASTER_r9eiyn.mp3',
-    'https://res.cloudinary.com/teatroojo/video/upload/v1602531619/volverse_negro/audio/Isla-2-Narracion-MASTER_jk9h5j.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-1-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-2-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-3-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-1-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-2-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-3-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-1-Narracion-MASTER.mp3',
+    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-2-Narracion-MASTER.mp3',
   ]
   useEffect(() => {
     if (typeof Audio !== 'undefined') {

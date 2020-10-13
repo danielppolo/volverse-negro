@@ -11,7 +11,8 @@ function VideoAD(props) {
         alignSelf: 'flex-start',
       }}
       y={[-40, 40]}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310294/volverse_negro/video/volversenegro_04.compressed_1.compressed_hulnya.mp4"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+04.compressed_1.compressed.jpg"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+04.compressed_1.compressed.jpg"
       {...props}
     />
   )

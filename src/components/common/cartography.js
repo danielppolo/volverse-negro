@@ -13,7 +13,7 @@ const Cartography = () => (
     className="cartography"
     layers={[
       {
-        image: 'https://res.cloudinary.com/teatroojo/image/upload/v1602487386/volverse_negro/images/cartography_bvgtoi.jpg',
+        image: 'https://volverse-negro.s3.us-east-2.amazonaws.com/images/cartography.jpg',
         amount: 0.2,
         props: {
           id: 'cartography',

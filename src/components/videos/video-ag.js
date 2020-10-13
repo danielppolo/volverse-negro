@@ -11,7 +11,8 @@ function VideoAG(props) {
         alignSelf: 'flex-end',
       }}
       y={[-30, 30]}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310275/volverse_negro/video/volversenegro_06.compressed_1.compressed_aat3vf.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+06.compressed_1.compressed.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+06.compressed_1.compressed.mp4"
       {...props}
     />
   )

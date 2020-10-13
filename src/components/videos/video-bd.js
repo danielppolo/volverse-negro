@@ -11,7 +11,8 @@ function VideoBD(props) {
         alignSelf: 'center',
       }}
       y={[-20, 20]}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310464/volverse_negro/video/volversenegro_28.compressed_1.compressed_pyqg2w.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+28.compressed_1.compressed.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+28.compressed_1.compressed.mp4"
       {...props}
     />
   )

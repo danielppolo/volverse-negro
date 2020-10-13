@@ -6,7 +6,8 @@ function ZoomC(props) {
   return (
     <Zoom
       {...props}
-      src="https://res.cloudinary.com/teatroojo/video/upload/v1602310564/volverse_negro/video/Zoom_3.compressed_1.compressed_jvtqvq.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/Zoom+3.compressed_1.compressed.compressed.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/Zoom+3.compressed_1.compressed.compressed.mp4"
     />
   )
 }

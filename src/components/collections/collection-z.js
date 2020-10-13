@@ -4,7 +4,7 @@ import Collection from '../common/collection'
 function CollectionZ({ props }) {
   return (
     <Collection
-      src={['https://res.cloudinary.com/teatroojo/image/upload/v1602487033/volverse_negro/images/24._p%C3%A1jaros_c%C3%BApula70_hipsjs.jpg']}
+      src={['https://volverse-negro.s3.us-east-2.amazonaws.com/images/24.+p%C3%A1jaros+c%C3%BApula70.jpg']}
       alt="Pájaros en la cúpula"
     />
   )

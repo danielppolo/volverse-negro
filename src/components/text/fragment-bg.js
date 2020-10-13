@@ -9,7 +9,10 @@ const ImageStyled = styled.img`
 function FragmentBG() {
   return (
     <Fragment pos="gg">
-      <ImageStyled src="https://res.cloudinary.com/teatroojo/image/upload/v1602443867/volverse_negro/images-text/image2_g4qrfk.jpg" alt="Señora de la abejas" />
+      <ImageStyled
+        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image2.jpg"
+        alt="Señora de la abejas"
+      />
     </Fragment>
   )
 }

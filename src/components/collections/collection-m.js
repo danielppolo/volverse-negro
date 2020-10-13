@@ -5,7 +5,7 @@ function CollectionM({ props }) {
   return (
     <Collection
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487042/volverse_negro/images/12._ni%C3%B1oabeja61_jssphj.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/12.+ni%C3%B1oabeja61.jpg',
       ]}
       alt="Niño abeja"
     />

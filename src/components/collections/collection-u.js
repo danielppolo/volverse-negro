@@ -6,12 +6,12 @@ function CollectionU({ props }) {
     <Collection
       alt="Palmeras"
       src={[
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487045/volverse_negro/images/20._palmeras34_gsh34p.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487045/volverse_negro/images/20._palmeras35_qalbne.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487046/volverse_negro/images/20._palmeras42_xpwfqj.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487045/volverse_negro/images/20._palmeras45_a0pkst.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487045/volverse_negro/images/20._palmeras46_p4tycl.jpg',
-        'https://res.cloudinary.com/teatroojo/image/upload/v1602487046/volverse_negro/images/20._palmeras48_nttxq9.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/20.+palmeras34.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/20.+palmeras35.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/20.+palmeras42.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/20.+palmeras45.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/20.+palmeras46.jpg',
+        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/20.+palmeras48.jpg',
       ]}
 
     />
