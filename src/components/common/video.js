@@ -8,10 +8,11 @@ const VideoStyled = styled.video`
 `
 
 function Video({
-  src, onPlay, onPause, width, y, x, style, poster,
+  src, onPlay, onPause, width, y, x, style, poster, volume,
 }) {
   const video = useRef(null)
   const handleMouseEnter = () => {
+    if (volume) video.current.volume = volume
     video.current.play()
     onPlay()
   }

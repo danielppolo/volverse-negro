@@ -44,7 +44,7 @@ const CollectionStyled = styled.div`
     > img, > div {
       transform: rotate(90deg) translateX(-50%);
       transform-origin: left bottom;
-      margin-bottom: ${({ size, vertical }) => (size / (vertical ? 8 : 1.5))}px;
+      margin-bottom: ${({ size, vertical }) => (size / (vertical ? 8 : 1.2))}px;
       /* max-height: 300px; */
     }
  }
@@ -66,7 +66,7 @@ function Collection({
       <Container>
         <Image
           height="100%"
-          width="80vw"
+          width={vertical ? '30vw' : '80vw'}
           overflow
           src={src[0]}
           alt={alt}
@@ -109,23 +109,14 @@ function Collection({
         data-cursor="desplazar"
       >
         {
-        src && src.map((e) => {
-          const offset = Math.floor(Math.random() * 20)
-          const width = Math.floor(Math.random() * 400) + 200
-          return (
-            <img
-              height={400}
-              // style={{
-              //   marginBottom: width + 30,
-              // }}
-              // offsetX={[-20, 20]}
-              // y={[offset * -1, offset]}
-              src={e}
-              alt={alt}
-              key={e}
-            />
-          )
-        })
+        src && src.map(e => (
+          <img
+            height={400}
+            src={e}
+            alt={alt}
+            key={e}
+          />
+        ))
       }
       </div>
     </CollectionStyled>

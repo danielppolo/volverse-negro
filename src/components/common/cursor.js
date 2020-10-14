@@ -4,7 +4,7 @@ import CursorClass from '../../utils/cursor'
 
 function Cursor() {
   const [cursor, setCursor] = useState(null)
-  const [label, setLabel] = useState('estampa')
+  const [label, setLabel] = useState('estampar')
   const { parallaxController } = useController()
 
   useEffect(() => {
