@@ -23,6 +23,16 @@ export default function HTML({
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: body }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+        `
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
+        `,
+          }}
+        />
         {postBodyComponents}
       </body>
     </html>

@@ -19,10 +19,12 @@ function Loading({ done, fontReady, onClick }) {
   const handleClick = (event) => {
     const { currentTarget } = event
     if (done && next) {
+      if (typeof window !== 'undefined') {
+        window.scrollTo(0, 0)
+      }
       currentTarget.classList.add('transition')
       setTimeout(() => {
         currentTarget.classList.add('hide')
-        console.log('Click')
         onClick()
       }, 1000)
     }
