@@ -246,7 +246,7 @@ const IndexPage = () => {
           <Container>
             <Title>El valle inquietante</Title>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-1-0">
                   <FragmentAA
                     active={isActive(1, 0)}
@@ -259,7 +259,7 @@ const IndexPage = () => {
               </Column>
             </Row>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-1-83">
                   <FragmentAB
                     active={isActive(1, 83)}
@@ -275,7 +275,7 @@ const IndexPage = () => {
           <Refineria pos="1" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-1-147">
                   <FragmentAC
                     active={isActive(1, 147)}
@@ -295,7 +295,7 @@ const IndexPage = () => {
           <Nino pos="2" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-1-204">
                   <FragmentAE
                     active={isActive(1, 204)}
@@ -311,7 +311,7 @@ const IndexPage = () => {
           <Maquinaria pos="3" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-2-0">
                   <FragmentAF
                     active={isActive(2, 0)}
@@ -343,7 +343,7 @@ const IndexPage = () => {
           <Parvadas pos="4" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-2-39">
                   <FragmentAL
                     active={isActive(2, 39)}
@@ -375,7 +375,7 @@ const IndexPage = () => {
           <NinoTurbina pos="5" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-2-69">
                   <FragmentAR
                     active={isActive(2, 69)}
@@ -400,7 +400,7 @@ const IndexPage = () => {
               </Column>
             </Row>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-2-128">
                   <FragmentAW
                     active={isActive(2, 128)}
@@ -431,7 +431,7 @@ const IndexPage = () => {
 
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-3-0">
                   <FragmentBA
                     active={isActive(3, 0)}
@@ -459,7 +459,7 @@ const IndexPage = () => {
           <Mano pos="7" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-3-92">
                   <FragmentBE
                     active={isActive(3, 92)}
@@ -487,7 +487,7 @@ const IndexPage = () => {
           <Cupulas pos="8" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-3-122">
                   <FragmentBI
                     active={isActive(3, 122)}
@@ -515,7 +515,7 @@ const IndexPage = () => {
           <Palomas pos="9" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-4-0">
                   <FragmentBO
                     active={isActive(4, 0)}
@@ -544,7 +544,7 @@ const IndexPage = () => {
           <Interior pos="10" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-4-98">
                   <FragmentBS
                     active={isActive(4, 98)}
@@ -573,7 +573,7 @@ const IndexPage = () => {
           <Cerro pos="11" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-4-175">
                   <FragmentBW
                     active={isActive(4, 175)}
@@ -604,7 +604,7 @@ const IndexPage = () => {
 
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-5-0">
                   <FragmentCA
                     active={isActive(5, 0)}
@@ -632,7 +632,7 @@ const IndexPage = () => {
           <NinoAbeja pos="13" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-5-57">
                   <FragmentCE
                     active={isActive(5, 57)}
@@ -656,7 +656,7 @@ const IndexPage = () => {
           <Panal pos="14" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-5-111">
                   <FragmentCH
                     active={isActive(5, 111)}
@@ -688,7 +688,7 @@ const IndexPage = () => {
           <FuegoRefineria pos="15" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-5-125">
                   <FragmentCM
                     active={isActive(5, 125)}
@@ -708,7 +708,7 @@ const IndexPage = () => {
           <Capsulas pos="16" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-6-0">
                   <FragmentCO
                     active={isActive(6, 0)}
@@ -736,7 +736,7 @@ const IndexPage = () => {
           <Aereo pos="17" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-6-132">
                   <FragmentCS
                     active={isActive(6, 132)}
@@ -764,7 +764,7 @@ const IndexPage = () => {
           <Campanario pos="18" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-6-167">
                   <FragmentCW
                     active={isActive(6, 167)}
@@ -791,7 +791,7 @@ const IndexPage = () => {
 
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-7-0">
                   <FragmentCZ
                     active={isActive(7, 0)}
@@ -823,7 +823,7 @@ const IndexPage = () => {
           <Bichos pos="20" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-7-68">
                   <FragmentDE
                     active={isActive(7, 68)}
@@ -855,7 +855,7 @@ const IndexPage = () => {
           <NinoCielo pos="21" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-7-149">
                   <FragmentDJ
                     active={isActive(7, 149)}
@@ -871,7 +871,7 @@ const IndexPage = () => {
           <Palmeras pos="22" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-7-193">
                   <FragmentDK
                     active={isActive(7, 193)}
@@ -895,7 +895,7 @@ const IndexPage = () => {
           <NinoCornisa pos="23" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-8-0">
                   <FragmentDN
                     active={isActive(8, 0)}
@@ -915,7 +915,7 @@ const IndexPage = () => {
           <PajarosCEARG pos="24" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-8-51">
                   <FragmentDP
                     active={isActive(8, 51)}
@@ -943,7 +943,7 @@ const IndexPage = () => {
           <Bayas pos="25" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-8-120">
                   <FragmentDT
                     active={isActive(8, 120)}
@@ -963,7 +963,7 @@ const IndexPage = () => {
           <NinoPanalito pos="26" />
           <Container>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-8-133">
                   <FragmentDV
                     active={isActive(8, 133)}
@@ -977,7 +977,7 @@ const IndexPage = () => {
               </Column>
             </Row>
             <Row>
-              <Column width={50}>
+              <Column width={60}>
                 <Element name="track-8-133">
                   <FragmentDW
                     active={isActive(8, 133)}

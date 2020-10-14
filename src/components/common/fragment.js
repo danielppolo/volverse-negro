@@ -6,7 +6,7 @@ const FragmentStyled = styled.div`
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding-right: 2.5rem;
+  padding-right: 4rem;
   margin-bottom: 1rem;
   .pos {
     transform: translate(-100%, 0);

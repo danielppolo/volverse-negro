@@ -11,7 +11,7 @@ const MusiciansIntroStyled = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   font-size: 1.2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
 
   .que {
     font-size: 1.5rem;
