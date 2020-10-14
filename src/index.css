@@ -6,8 +6,12 @@
 }
 
 html {
-  --color-bg: #E7E1DA;
-  --color-text: #383532;
+  --color-bg:  #CFCEC1;
+  --color-text:#383532;
+  /* GOOD ONES */
+  /* --color-bg: #E7E1DA;
+  --color-text: #383532; */
+  /* LEGACY */
   /* --color-bg: #FFF2E1;
   --color-text: #383532; */
   --color-link: #000;
