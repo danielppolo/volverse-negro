@@ -6,13 +6,15 @@ import Reveal from './reveal'
 const LocationStyled = styled.p`
   align-self: flex-end;
   font-size: 2rem;
-  padding-left: 50%;
+  margin-left: 50%;
+  width: 50%;
   p {
     text-align: right;
   }
   @media (max-width: 720px) {
     font-size: 1.5rem;
-    padding-left: 40%;
+    width: 70%;
+    margin-left: 30%;
   }
 `
 
