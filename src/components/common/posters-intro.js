@@ -31,10 +31,7 @@ function MusiciansIntro({ props }) {
       y={[-10, 20]}
     >
       <MusiciansIntroStyled>
-        <i>Carteles Volverse negro, en la ciudad.</i>
-        <p>
-        En los espacios públicos y la barda que rodea a la refinería de Salamanca, están dispuestos una serie de carteles que proponen múltiples tentativas de lectura en torno a la figura de un niño sentado en la cornisa superior del Centro de las Artes de Guanajuato, ante el enigma de su aparición.
-        </p>
+      Especulación gráfica sobre la aparición de un niño sentado sobre la cornisa superior del Centro de las Artes de Guanajuato. Carteles colocados en la barda perimetral de la Refinería Ing. Antonio M. Amor y en espacios públicos de Salamanca y Guanajuato, Gto.
       </MusiciansIntroStyled>
     </Parallax>
   )

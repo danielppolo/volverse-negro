@@ -10,6 +10,7 @@ const Container = styled.div`
     max-width: 80%;
     max-height: 50px;
     margin-right: 2rem;
+    filter: grayscale(100%);
   }
   @media (max-width: 720px) {
     flex-wrap: wrap;
@@ -24,8 +25,9 @@ function Logotypes() {
     <Container>
       <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logos+SecretariaCultura_Fonca-1.png" alt="FONCA" />
       <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/FIC2020.png" alt="FIC" />
-      <img style={{ mixBlendMode: 'multiply' }} src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logo+tojo2-2.jpg" alt="Teatro Ojo" />
+      <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/LOGO+GTO+IEC.png" alt="Instituto Estatal de Cultura" />
       <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logo+CEARG+.png" alt="CEARG" />
+      <img style={{ mixBlendMode: 'multiply' }} src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logo+tojo2-2.jpg" alt="Teatro Ojo" />
     </Container>
   )
 }

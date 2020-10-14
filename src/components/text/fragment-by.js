@@ -13,7 +13,7 @@ oscuridad absoluta. ¿O el negro sostiene el blanco al dispersarse en la luz? Si
 trata de girar el cuadro se dará cuenta de que no hay arribaniabajo y que todo es un
 círculo en espera de que lo roten. Negronoche, negropetróleo, negrooscuridad,
 negrocristo, negroespaciosideral. No hables de la ausencia de color, mejor di que
-nada se puede entender si el contraste entre las superficies comprensibles de la
+nada se puede entender sin el contraste entre las superficies comprensibles de la
 realidad y las formas inesperadas de la sorpresa. Este cuadro calla. El blanco es
 blanco/el negro es negro.
       </p>

@@ -13,8 +13,7 @@ function FragmentAB(props) {
     lenguajes del aire. ¿A quién le predicaban si en esa plaza de piedra sólo había
     algunas parejas ensimismadas, con helados en sus manos?, ¿quién escuchaba sus
     invocaciones si todo parecía desierto? La prédica no necesita escucha. Si se invocan
-    otras fuerzas, no hay testigos. El tren era otra invocación, pero a las energías
-    temblorosas de este mundo. Cada cierto tiempo, se escuchaba su sonido pesado y
+    otras fuerzas, no hay testigos. El tren era una invocación a las energías temblorosas de este mundo. Cada cierto tiempo, se escuchaba su sonido pesado y
     continuo, como si respondiera a esas voces, secas y curvas, que anunciaban un
     reino, otro mundo.
       </p>

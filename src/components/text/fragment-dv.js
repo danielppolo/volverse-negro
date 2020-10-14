@@ -5,7 +5,7 @@ function FragmentDV(props) {
   return (
     <Fragment pos="vvvv" {...props}>
       <p>
-  Petardos y también trompetas
+  Petardos y trompetas
   Vendedores y carros
         <br />
   Voces interiores y gritos
