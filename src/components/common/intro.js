@@ -29,6 +29,7 @@ function Intro({ props }) {
       <IntroStyled>
         <p>
        Escena:
+          <br />
         Un niño contempla un paisaje, toma aire y sopla, su aliento hace sonar una flauta.
         </p>
         <br />

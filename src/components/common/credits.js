@@ -34,7 +34,7 @@ function Credits() {
           {' '}
           <i>
           Héctor Bourges*,  Karla Rodríguez**,  Laura Furlan,  Patricio
-          Villarreal***,  Fernanda Villegas****,  Alonso Arrieta  y  María López.
+          Villarreal***,  Fernanda Villegas****,  Alonso Arrieta, Kerygma Flores  y  María López.
           </i>
           <br />
           <br />
@@ -119,7 +119,7 @@ function Credits() {
           <i>
           Armando Moreno, Francisco
           Balboa, Marisol Padilla, Pablo Ayala, Christian Magaña, Arnold Nieto, Manuel Luna, Arturo
-          Quezadas, Indra Ortiz.
+          Quezadas, Indra Ortiz, Karla Guzmán.
           </i>
           <br />
           <br />
@@ -133,7 +133,7 @@ function Credits() {
           <br />
           <span data-line="**">Beneficiaria del Sistema Nacional de Creadores de Arte 2018 del Fonca</span>
           <br />
-          <span data-line="***">Beneficiario del Programa Creadores Escénicos 2018 del Fonca</span>
+          <span data-line="***">Beneficiario del Programa Creadores Escénicos con trayectoria 2018 del Fonca</span>
           <br />
           <span data-line="****">Beneficiaria del Programa Creadores Escénicos 2019 del Fonca</span>
         </p>

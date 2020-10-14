@@ -17,11 +17,11 @@ function Loading({ done, fontReady, onClick }) {
   })
 
   const handleClick = (event) => {
-    const { target } = event
+    const { currentTarget } = event
     if (done && next) {
-      target.classList.add('transition')
+      currentTarget.classList.add('transition')
       setTimeout(() => {
-        target.classList.add('hide')
+        currentTarget.classList.add('hide')
         console.log('Click')
         onClick()
       }, 1000)

@@ -21,14 +21,14 @@ const useAmbientSound = (secondary) => {
   useEffect(() => {
     if (interacted && track) {
       track.loop = true
-      track.volume = 0.1
+      track.volume = 0.2
       track.play()
     }
   }, [interacted])
 
   useEffect(() => {
     if (track) {
-      track.volume = secondary ? 0 : 0.1
+      track.volume = secondary ? 0.1 : 0.2
     }
   }, [secondary])
 }
