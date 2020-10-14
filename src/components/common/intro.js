@@ -4,14 +4,16 @@ import styled from 'styled-components'
 
 const IntroStyled = styled.div`
   height: 100vh;
-  width: 100%;
   position: relative;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 1rem;
-
+  width: 60%;
+  @media (max-width: 720px) {
+    width: 100%;
+  }
   .que {
     font-size: 1.5rem;
   }

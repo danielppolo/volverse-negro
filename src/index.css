@@ -88,7 +88,7 @@ h1 {
 
   .cursor__text {
     fill: var(--color-text);
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -129,6 +129,7 @@ h1 {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  text-align: right;
 }
 
 .Loading .percentage {
@@ -144,6 +145,13 @@ h1 {
 
 .Loading .continue {
   font-size: 1.4rem;
+}
+
+.Loading .recommended {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 0.3rem;
+  font-family: Inter, sans;
 }
 
 

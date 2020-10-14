@@ -8,8 +8,12 @@ const ImageStyled = styled.img`
 `
 
 function Image({
-  src, y, offsetX, style, width, overflow, height,
+  src, y, offsetX, style, width, overflow, height, noParallax,
 }) {
+  if (noParallax) {
+    return <ImageStyled src={src} alt="" style={style} width={width} />
+  }
+
   return (
     <Parallax
       className={overflow ? 'overflow-hidden image-container' : 'image-container'}

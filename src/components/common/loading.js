@@ -49,12 +49,12 @@ function Loading({ done, fontReady, onClick }) {
       <div className="right-bottom">
         {
          next ? (
-           <span
+           <p
              onClick={handleClick}
              className="continue"
            >
             Da click para continuar
-           </span>
+           </p>
          ) : (
            <animated.span
              className="percentage"
@@ -64,6 +64,8 @@ function Loading({ done, fontReady, onClick }) {
            </animated.span>
          )
       }
+
+        <p className="recommended">Para una mejor experiencia usar Chrome, Firefox o Edge en PC.</p>
       </div>
     </div>
   )

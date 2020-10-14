@@ -30,9 +30,12 @@ function Fragment({
   children, pos, active, ...otherProps
 }) {
   return (
-    <FragmentStyled 
-    {...otherProps} 
-    data-cursor="escuchar">
+    <FragmentStyled
+      {...otherProps}
+      data-active={active}
+      data-cursor="escuchar"
+      data-cursor-alt="pausar"
+    >
       {
          children
        }

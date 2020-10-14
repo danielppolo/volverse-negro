@@ -27,7 +27,11 @@ function Cursor() {
     }
     const handleItemEnter = (event) => {
       c.emit('enter')
-      setLabel(event.currentTarget.dataset.cursor)
+      if (event.currentTarget.dataset.active === 'true') {
+        setLabel(event.currentTarget.dataset.cursorAlt)
+      } else {
+        setLabel(event.currentTarget.dataset.cursor)
+      }
     }
     const handleItemLeave = (event) => {
       c.emit('leave')

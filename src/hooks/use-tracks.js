@@ -35,11 +35,12 @@ function useTracks() {
       const handleTrackEnd = (event) => {
         const currentIndex = sources.indexOf(event.currentTarget.src)
         if (currentIndex > -1 && audioTracks[currentIndex + 1]) {
-          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             console.log('Autoplay next audio')
             audioTracks[currentIndex + 1].play()
             scrollTo(currentIndex + 2)
             setCurrent(currentIndex + 1)
+            setSection(0)
           }
         }
       }
@@ -53,6 +54,7 @@ function useTracks() {
             console.log('Autoplay 🔈')
             audioTracks.forEach((track) => { track.pause() })
             audioTracks[0].play()
+            setSection(0)
             window.removeEventListener('scroll', handleWindowScroll)
           }
         }
@@ -74,6 +76,7 @@ function useTracks() {
           setCurrent(num - 1)
         } else {
           tracks[current].pause()
+          setSection(null)
           setActive(false)
         }
       } else if (num) {
@@ -101,6 +104,7 @@ function useTracks() {
       } else {
         console.log(`Pause track ${current}`)
         tracks[current].pause()
+        setSection(null)
         setActive(false)
       }
     },
@@ -108,7 +112,7 @@ function useTracks() {
   )
 
   return {
-    current: current + 1, playback, active,
+    current: current + 1, currentSection: section, playback, active,
   }
 }
 

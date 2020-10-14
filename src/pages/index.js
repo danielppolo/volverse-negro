@@ -206,7 +206,9 @@ const IndexPage = () => {
     'streaming-3',
     'streaming-4',
   ], ready)
-  const { current, playback, active } = useTracks()
+  const {
+    current, currentSection, playback, active,
+  } = useTracks()
   useAmbientSound((playing || current))
   const stamp = useFigures(ready)
 
@@ -218,8 +220,12 @@ const IndexPage = () => {
     () => { setPlaying(false) },
     [],
   )
+  const isActive = useCallback(
+    (paragraph, section) => current === paragraph && section === currentSection,
+    [current, currentSection],
+  )
 
-  console.log(current)
+  console.log(current, currentSection)
   return (
     <ParallaxProvider>
       <Layout>
@@ -242,7 +248,10 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-1-0">
-                  <FragmentAA active={current === 1} onClick={() => playback(1)} />
+                  <FragmentAA
+                    active={isActive(1, 0)}
+                    onClick={() => playback(1)}
+                  />
                 </Element>
               </Column>
               <Column grow>
@@ -252,7 +261,10 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-1-83">
-                  <FragmentAB active={current === 1} onClick={() => playback(1, 83)} />
+                  <FragmentAB
+                    active={isActive(1, 83)}
+                    onClick={() => playback(1, 83)}
+                  />
                 </Element>
               </Column>
               <Column grow>
@@ -265,8 +277,14 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-1-147">
-                  <FragmentAC active={current === 1} onClick={() => playback(1, 147)} />
-                  <FragmentAD active={current === 1} onClick={() => playback(1, 147)} />
+                  <FragmentAC
+                    active={isActive(1, 147)}
+                    onClick={() => playback(1, 147)}
+                  />
+                  <FragmentAD
+                    active={isActive(1, 147)}
+                    onClick={() => playback(1, 147)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -279,7 +297,10 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-1-204">
-                  <FragmentAE active={current === 1} onClick={() => playback(1, 204)} />
+                  <FragmentAE
+                    active={isActive(1, 204)}
+                    onClick={() => playback(1, 204)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -292,11 +313,26 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-2-0">
-                  <FragmentAF active={current === 2} onClick={() => playback(2)} />
-                  <FragmentAG active={current === 2} onClick={() => playback(2)} />
-                  <FragmentAH active={current === 2} onClick={() => playback(2)} />
-                  <FragmentAI active={current === 2} onClick={() => playback(2)} />
-                  <FragmentAJ active={current === 2} onClick={() => playback(2)} />
+                  <FragmentAF
+                    active={isActive(2, 0)}
+                    onClick={() => playback(2)}
+                  />
+                  <FragmentAG
+                    active={isActive(2, 0)}
+                    onClick={() => playback(2)}
+                  />
+                  <FragmentAH
+                    active={isActive(2, 0)}
+                    onClick={() => playback(2)}
+                  />
+                  <FragmentAI
+                    active={isActive(2, 0)}
+                    onClick={() => playback(2)}
+                  />
+                  <FragmentAJ
+                    active={isActive(2, 0)}
+                    onClick={() => playback(2)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -309,11 +345,26 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-2-39">
-                  <FragmentAL active={current === 2} onClick={() => playback(2, 39)} />
-                  <FragmentAM active={current === 2} onClick={() => playback(2, 39)} />
-                  <FragmentAN active={current === 2} onClick={() => playback(2, 39)} />
-                  <FragmentAQ active={current === 2} onClick={() => playback(2, 39)} />
-                  <FragmentAR active={current === 2} onClick={() => playback(2, 39)} />
+                  <FragmentAL
+                    active={isActive(2, 39)}
+                    onClick={() => playback(2, 39)}
+                  />
+                  <FragmentAM
+                    active={isActive(2, 39)}
+                    onClick={() => playback(2, 39)}
+                  />
+                  <FragmentAN
+                    active={isActive(2, 39)}
+                    onClick={() => playback(2, 39)}
+                  />
+                  <FragmentAQ
+                    active={isActive(2, 39)}
+                    onClick={() => playback(2, 39)}
+                  />
+                  <FragmentAR
+                    active={isActive(2, 39)}
+                    onClick={() => playback(2, 39)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -326,10 +377,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-2-69">
-                  <FragmentAR active={current === 2} onClick={() => playback(2, 69)} />
-                  <FragmentAS active={current === 2} onClick={() => playback(2, 69)} />
-                  <FragmentAT active={current === 2} onClick={() => playback(2, 69)} />
-                  <FragmentAV active={current === 2} onClick={() => playback(2, 69)} />
+                  <FragmentAR
+                    active={isActive(2, 69)}
+                    onClick={() => playback(2, 69)}
+                  />
+                  <FragmentAS
+                    active={isActive(2, 69)}
+                    onClick={() => playback(2, 69)}
+                  />
+                  <FragmentAT
+                    active={isActive(2, 69)}
+                    onClick={() => playback(2, 69)}
+                  />
+                  <FragmentAV
+                    active={isActive(2, 69)}
+                    onClick={() => playback(2, 69)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -339,10 +402,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-2-128">
-                  <FragmentAW active={current === 2} onClick={() => playback(2, 128)} />
-                  <FragmentAX active={current === 2} onClick={() => playback(2, 128)} />
-                  <FragmentAY active={current === 2} onClick={() => playback(2, 128)} />
-                  <FragmentAZ active={current === 2} onClick={() => playback(2, 128)} />
+                  <FragmentAW
+                    active={isActive(2, 128)}
+                    onClick={() => playback(2, 128)}
+                  />
+                  <FragmentAX
+                    active={isActive(2, 128)}
+                    onClick={() => playback(2, 128)}
+                  />
+                  <FragmentAY
+                    active={isActive(2, 128)}
+                    onClick={() => playback(2, 128)}
+                  />
+                  <FragmentAZ
+                    active={isActive(2, 128)}
+                    onClick={() => playback(2, 128)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -358,10 +433,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-3-0">
-                  <FragmentBA active={current === 3} onClick={() => playback(3)} />
-                  <FragmentBB active={current === 3} onClick={() => playback(3)} />
-                  <FragmentBC active={current === 3} onClick={() => playback(3)} />
-                  <FragmentBD active={current === 3} onClick={() => playback(3)} />
+                  <FragmentBA
+                    active={isActive(3, 0)}
+                    onClick={() => playback(3)}
+                  />
+                  <FragmentBB
+                    active={isActive(3, 0)}
+                    onClick={() => playback(3)}
+                  />
+                  <FragmentBC
+                    active={isActive(3, 0)}
+                    onClick={() => playback(3)}
+                  />
+                  <FragmentBD
+                    active={isActive(3, 0)}
+                    onClick={() => playback(3)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -374,10 +461,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-3-92">
-                  <FragmentBE active={current === 3} onClick={() => playback(3, 92)} />
-                  <FragmentBF active={current === 3} onClick={() => playback(3, 92)} />
-                  <FragmentBG active={current === 3} onClick={() => playback(3, 92)} />
-                  <FragmentBH active={current === 3} onClick={() => playback(3, 92)} />
+                  <FragmentBE
+                    active={isActive(3, 92)}
+                    onClick={() => playback(3, 92)}
+                  />
+                  <FragmentBF
+                    active={isActive(3, 92)}
+                    onClick={() => playback(3, 92)}
+                  />
+                  <FragmentBG
+                    active={isActive(3, 92)}
+                    onClick={() => playback(3, 92)}
+                  />
+                  <FragmentBH
+                    active={isActive(3, 92)}
+                    onClick={() => playback(3, 92)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -390,10 +489,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-3-122">
-                  <FragmentBI active={current === 3} onClick={() => playback(3, 122)} />
-                  <FragmentBJ active={current === 3} onClick={() => playback(3, 122)} />
-                  <FragmentBK active={current === 3} onClick={() => playback(3, 122)} />
-                  <FragmentBL active={current === 3} onClick={() => playback(3, 122)} />
+                  <FragmentBI
+                    active={isActive(3, 122)}
+                    onClick={() => playback(3, 122)}
+                  />
+                  <FragmentBJ
+                    active={isActive(3, 122)}
+                    onClick={() => playback(3, 122)}
+                  />
+                  <FragmentBK
+                    active={isActive(3, 122)}
+                    onClick={() => playback(3, 122)}
+                  />
+                  <FragmentBL
+                    active={isActive(3, 122)}
+                    onClick={() => playback(3, 122)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -406,10 +517,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-4-0">
-                  <FragmentBO active={current === 4} onClick={() => playback(4)} />
-                  <FragmentBP active={current === 4} onClick={() => playback(4)} />
-                  <FragmentBQ active={current === 4} onClick={() => playback(4)} />
-                  <FragmentBR active={current === 4} onClick={() => playback(4)} />
+                  <FragmentBO
+                    active={isActive(4, 0)}
+                    onClick={() => playback(4)}
+                  />
+                  <FragmentBP
+                    active={isActive(4, 0)}
+                    onClick={() => playback(4)}
+                  />
+                  <FragmentBQ
+                    active={isActive(4, 0)}
+                    onClick={() => playback(4)}
+                  />
+                  <FragmentBR
+                    active={isActive(4, 0)}
+                    onClick={() => playback(4)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -423,10 +546,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-4-98">
-                  <FragmentBS active={current === 4} onClick={() => playback(4, 98)} />
-                  <FragmentBT active={current === 4} onClick={() => playback(4, 98)} />
-                  <FragmentBU active={current === 4} onClick={() => playback(4, 98)} />
-                  <FragmentBV active={current === 4} onClick={() => playback(4, 98)} />
+                  <FragmentBS
+                    active={isActive(4, 98)}
+                    onClick={() => playback(4, 98)}
+                  />
+                  <FragmentBT
+                    active={isActive(4, 98)}
+                    onClick={() => playback(4, 98)}
+                  />
+                  <FragmentBU
+                    active={isActive(4, 98)}
+                    onClick={() => playback(4, 98)}
+                  />
+                  <FragmentBV
+                    active={isActive(4, 98)}
+                    onClick={() => playback(4, 98)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -440,10 +575,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-4-175">
-                  <FragmentBW active={current === 4} onClick={() => playback(4, 175)} />
-                  <FragmentBX active={current === 4} onClick={() => playback(4, 175)} />
-                  <FragmentBY active={current === 4} onClick={() => playback(4, 175)} />
-                  <FragmentBZ active={current === 4} onClick={() => playback(4, 175)} />
+                  <FragmentBW
+                    active={isActive(4, 175)}
+                    onClick={() => playback(4, 175)}
+                  />
+                  <FragmentBX
+                    active={isActive(4, 175)}
+                    onClick={() => playback(4, 175)}
+                  />
+                  <FragmentBY
+                    active={isActive(4, 175)}
+                    onClick={() => playback(4, 175)}
+                  />
+                  <FragmentBZ
+                    active={isActive(4, 175)}
+                    onClick={() => playback(4, 175)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -459,10 +606,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-5-0">
-                  <FragmentCA active={current === 5} onClick={() => playback(5)} />
-                  <FragmentCB active={current === 5} onClick={() => playback(5)} />
-                  <FragmentCC active={current === 5} onClick={() => playback(5)} />
-                  <FragmentCD active={current === 5} onClick={() => playback(5)} />
+                  <FragmentCA
+                    active={isActive(5, 0)}
+                    onClick={() => playback(5)}
+                  />
+                  <FragmentCB
+                    active={isActive(5, 0)}
+                    onClick={() => playback(5)}
+                  />
+                  <FragmentCC
+                    active={isActive(5, 0)}
+                    onClick={() => playback(5)}
+                  />
+                  <FragmentCD
+                    active={isActive(5, 0)}
+                    onClick={() => playback(5)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -475,9 +634,18 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-5-57">
-                  <FragmentCE active={current === 5} onClick={() => playback(5, 57)} />
-                  <FragmentCF active={current === 5} onClick={() => playback(5, 57)} />
-                  <FragmentCG active={current === 5} onClick={() => playback(5, 57)} />
+                  <FragmentCE
+                    active={isActive(5, 57)}
+                    onClick={() => playback(5, 57)}
+                  />
+                  <FragmentCF
+                    active={isActive(5, 57)}
+                    onClick={() => playback(5, 57)}
+                  />
+                  <FragmentCG
+                    active={isActive(5, 57)}
+                    onClick={() => playback(5, 57)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -490,11 +658,26 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-5-111">
-                  <FragmentCH active={current === 5} onClick={() => playback(5, 111)} />
-                  <FragmentCI active={current === 5} onClick={() => playback(5, 111)} />
-                  <FragmentCJ active={current === 5} onClick={() => playback(5, 111)} />
-                  <FragmentCK active={current === 5} onClick={() => playback(5, 111)} />
-                  <FragmentCL active={current === 5} onClick={() => playback(5, 111)} />
+                  <FragmentCH
+                    active={isActive(5, 111)}
+                    onClick={() => playback(5, 111)}
+                  />
+                  <FragmentCI
+                    active={isActive(5, 111)}
+                    onClick={() => playback(5, 111)}
+                  />
+                  <FragmentCJ
+                    active={isActive(5, 111)}
+                    onClick={() => playback(5, 111)}
+                  />
+                  <FragmentCK
+                    active={isActive(5, 111)}
+                    onClick={() => playback(5, 111)}
+                  />
+                  <FragmentCL
+                    active={isActive(5, 111)}
+                    onClick={() => playback(5, 111)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -507,8 +690,14 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-5-125">
-                  <FragmentCM active={current === 5} onClick={() => playback(5, 125)} />
-                  <FragmentCN active={current === 5} onClick={() => playback(5, 125)} />
+                  <FragmentCM
+                    active={isActive(5, 125)}
+                    onClick={() => playback(5, 125)}
+                  />
+                  <FragmentCN
+                    active={isActive(5, 125)}
+                    onClick={() => playback(5, 125)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -521,10 +710,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-6-0">
-                  <FragmentCO active={current === 6} onClick={() => playback(6)} />
-                  <FragmentCP active={current === 6} onClick={() => playback(6)} />
-                  <FragmentCQ active={current === 6} onClick={() => playback(6)} />
-                  <FragmentCR active={current === 6} onClick={() => playback(6)} />
+                  <FragmentCO
+                    active={isActive(6, 0)}
+                    onClick={() => playback(6)}
+                  />
+                  <FragmentCP
+                    active={isActive(6, 0)}
+                    onClick={() => playback(6)}
+                  />
+                  <FragmentCQ
+                    active={isActive(6, 0)}
+                    onClick={() => playback(6)}
+                  />
+                  <FragmentCR
+                    active={isActive(6, 0)}
+                    onClick={() => playback(6)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -537,10 +738,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-6-132">
-                  <FragmentCS active={current === 6} onClick={() => playback(6, 132)} />
-                  <FragmentCT active={current === 6} onClick={() => playback(6, 132)} />
-                  <FragmentCU active={current === 6} onClick={() => playback(6, 132)} />
-                  <FragmentCV active={current === 6} onClick={() => playback(6, 132)} />
+                  <FragmentCS
+                    active={isActive(6, 132)}
+                    onClick={() => playback(6, 132)}
+                  />
+                  <FragmentCT
+                    active={isActive(6, 132)}
+                    onClick={() => playback(6, 132)}
+                  />
+                  <FragmentCU
+                    active={isActive(6, 132)}
+                    onClick={() => playback(6, 132)}
+                  />
+                  <FragmentCV
+                    active={isActive(6, 132)}
+                    onClick={() => playback(6, 132)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -553,9 +766,18 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-6-167">
-                  <FragmentCW active={current === 6} onClick={() => playback(6, 167)} />
-                  <FragmentCX active={current === 6} onClick={() => playback(6, 167)} />
-                  <FragmentCY active={current === 6} onClick={() => playback(6, 167)} />
+                  <FragmentCW
+                    active={isActive(6, 167)}
+                    onClick={() => playback(6, 167)}
+                  />
+                  <FragmentCX
+                    active={isActive(6, 167)}
+                    onClick={() => playback(6, 167)}
+                  />
+                  <FragmentCY
+                    active={isActive(6, 167)}
+                    onClick={() => playback(6, 167)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -571,11 +793,26 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-7-0">
-                  <FragmentCZ active={current === 7} onClick={() => playback(7)} />
-                  <FragmentDA active={current === 7} onClick={() => playback(7)} />
-                  <FragmentDB active={current === 7} onClick={() => playback(7)} />
-                  <FragmentDC active={current === 7} onClick={() => playback(7)} />
-                  <FragmentDD active={current === 7} onClick={() => playback(7)} />
+                  <FragmentCZ
+                    active={isActive(7, 0)}
+                    onClick={() => playback(7)}
+                  />
+                  <FragmentDA
+                    active={isActive(7, 0)}
+                    onClick={() => playback(7)}
+                  />
+                  <FragmentDB
+                    active={isActive(7, 0)}
+                    onClick={() => playback(7)}
+                  />
+                  <FragmentDC
+                    active={isActive(7, 0)}
+                    onClick={() => playback(7)}
+                  />
+                  <FragmentDD
+                    active={isActive(7, 0)}
+                    onClick={() => playback(7)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -588,11 +825,26 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-7-68">
-                  <FragmentDE active={current === 7} onClick={() => playback(7, 68)} />
-                  <FragmentDF active={current === 7} onClick={() => playback(7, 68)} />
-                  <FragmentDG active={current === 7} onClick={() => playback(7, 68)} />
-                  <FragmentDH active={current === 7} onClick={() => playback(7, 68)} />
-                  <FragmentDI active={current === 7} onClick={() => playback(7, 68)} />
+                  <FragmentDE
+                    active={isActive(7, 68)}
+                    onClick={() => playback(7, 68)}
+                  />
+                  <FragmentDF
+                    active={isActive(7, 68)}
+                    onClick={() => playback(7, 68)}
+                  />
+                  <FragmentDG
+                    active={isActive(7, 68)}
+                    onClick={() => playback(7, 68)}
+                  />
+                  <FragmentDH
+                    active={isActive(7, 68)}
+                    onClick={() => playback(7, 68)}
+                  />
+                  <FragmentDI
+                    active={isActive(7, 68)}
+                    onClick={() => playback(7, 68)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -605,7 +857,10 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-7-149">
-                  <FragmentDJ active={current === 7} onClick={() => playback(7, 149)} />
+                  <FragmentDJ
+                    active={isActive(7, 149)}
+                    onClick={() => playback(7, 149)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -618,9 +873,18 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-7-193">
-                  <FragmentDK active={current === 7} onClick={() => playback(7, 193)} />
-                  <FragmentDL active={current === 7} onClick={() => playback(7, 193)} />
-                  <FragmentDM active={current === 7} onClick={() => playback(7, 193)} />
+                  <FragmentDK
+                    active={isActive(7, 193)}
+                    onClick={() => playback(7, 193)}
+                  />
+                  <FragmentDL
+                    active={isActive(7, 193)}
+                    onClick={() => playback(7, 193)}
+                  />
+                  <FragmentDM
+                    active={isActive(7, 193)}
+                    onClick={() => playback(7, 193)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -633,8 +897,14 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-8-0">
-                  <FragmentDN active={current === 8} onClick={() => playback(8)} />
-                  <FragmentDO active={current === 8} onClick={() => playback(8)} />
+                  <FragmentDN
+                    active={isActive(8, 0)}
+                    onClick={() => playback(8)}
+                  />
+                  <FragmentDO
+                    active={isActive(8, 0)}
+                    onClick={() => playback(8)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -647,10 +917,22 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-8-51">
-                  <FragmentDP active={current === 8} onClick={() => playback(8, 51)} />
-                  <FragmentDQ active={current === 8} onClick={() => playback(8, 51)} />
-                  <FragmentDR active={current === 8} onClick={() => playback(8, 51)} />
-                  <FragmentDS active={current === 8} onClick={() => playback(8, 51)} />
+                  <FragmentDP
+                    active={isActive(8, 51)}
+                    onClick={() => playback(8, 51)}
+                  />
+                  <FragmentDQ
+                    active={isActive(8, 51)}
+                    onClick={() => playback(8, 51)}
+                  />
+                  <FragmentDR
+                    active={isActive(8, 51)}
+                    onClick={() => playback(8, 51)}
+                  />
+                  <FragmentDS
+                    active={isActive(8, 51)}
+                    onClick={() => playback(8, 51)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -663,8 +945,14 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-8-120">
-                  <FragmentDT active={current === 8} onClick={() => playback(8, 120)} />
-                  <FragmentDU active={current === 8} onClick={() => playback(8, 120)} />
+                  <FragmentDT
+                    active={isActive(8, 120)}
+                    onClick={() => playback(8, 120)}
+                  />
+                  <FragmentDU
+                    active={isActive(8, 120)}
+                    onClick={() => playback(8, 120)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -677,7 +965,10 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-8-133">
-                  <FragmentDV active={current === 8} onClick={() => playback(8, 133)} />
+                  <FragmentDV
+                    active={isActive(8, 133)}
+                    onClick={() => playback(8, 133)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -688,8 +979,14 @@ const IndexPage = () => {
             <Row>
               <Column width={50}>
                 <Element name="track-8-133">
-                  <FragmentDW active={current === 8} onClick={() => playback(8, 133)} />
-                  <FragmentDX active={current === 8} onClick={() => playback(8, 133)} />
+                  <FragmentDW
+                    active={isActive(8, 133)}
+                    onClick={() => playback(8, 133)}
+                  />
+                  <FragmentDX
+                    active={isActive(8, 133)}
+                    onClick={() => playback(8, 133)}
+                  />
                 </Element>
               </Column>
               <Column>
@@ -731,9 +1028,6 @@ const IndexPage = () => {
         {
           ready && <Cursor />
         }
-        {/* {
-          current && <Playback onClick={playback} active={active} />
-        } */}
       </Layout>
     </ParallaxProvider>
   )

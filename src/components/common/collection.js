@@ -58,7 +58,9 @@ const CollectionStyled = styled.div`
     }
   }
 `
-function Collection({ src, alt, vertical }) {
+function Collection({
+  src, alt, vertical, ...otherProps
+}) {
   if (src.length === 1) {
     return (
       <Container>
@@ -68,6 +70,7 @@ function Collection({ src, alt, vertical }) {
           overflow
           src={src[0]}
           alt={alt}
+          {...otherProps}
         />
       </Container>
     )
