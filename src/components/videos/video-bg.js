@@ -6,10 +6,11 @@ function VideoBG(props) {
   return (
     <Video
       style={{
+        marginTop: '10em',
         alignSelf: 'flex-end',
         width: '80%',
       }}
-      y={[-40, 20]}
+      y={[0, 20]}
       poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+30.compressed_1.compressed.jpg"
       src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+30.compressed_1.compressed.mp4"
       {...props}

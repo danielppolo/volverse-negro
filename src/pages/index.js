@@ -141,6 +141,7 @@ import VideoBC from '../components/videos/video-bc'
 import VideoBD from '../components/videos/video-bd'
 import VideoBE from '../components/videos/video-be'
 import VideoBF from '../components/videos/video-bf'
+import VideoBH from '../components/videos/video-bh'
 import VideoBG from '../components/videos/video-bg'
 import Refineria from '../components/collections/collection-a'
 import Nino from '../components/collections/collection-b'
@@ -169,6 +170,7 @@ import PajarosCEARG from '../components/collections/collection-w'
 import Bayas from '../components/collections/collection-x'
 import NinoPanalito from '../components/collections/collection-y'
 import PajarosCupula from '../components/collections/collection-z'
+import NinoFlauta from '../components/collections/collection-az'
 import Posters from '../components/common/posters'
 import PostersIntro from '../components/common/posters-intro'
 import Musicians from '../components/common/musicians'
@@ -974,6 +976,7 @@ const IndexPage = () => {
               <Column>
                 <VideoBE onPlay={handleVideoPlay} onPause={handleVideoPause} />
                 <VideoBF onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
             <Row>
@@ -990,11 +993,12 @@ const IndexPage = () => {
                 </Element>
               </Column>
               <Column>
-                <VideoBG onPlay={handleVideoPlay} onPause={handleVideoPause} />
+                <VideoBH onPlay={handleVideoPlay} onPause={handleVideoPause} />
               </Column>
             </Row>
           </Container>
-          <PajarosCupula pos="27" />
+          <NinoFlauta pos="27" />
+          <PajarosCupula pos="28" />
         </div>
         <div>
           <MusiciansIntro />

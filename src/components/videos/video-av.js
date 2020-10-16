@@ -11,8 +11,8 @@ function VideoAV(props) {
         width: '90%',
       }}
       y={[0, 50]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+21.compressed_1.compressed.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+21.compressed_1.compressed.mp4"
+      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/31.+Nuevo+(1)_1.jpg"
+      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/31.+Nuevo+(1).mp4"
       {...props}
     />
   )
