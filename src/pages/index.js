@@ -190,24 +190,16 @@ import Title from '../components/common/title'
 import useMediaLoaded from '../hooks/use-media-loaded'
 import useTracks from '../hooks/use-tracks'
 import Welcome from '../components/common/welcome'
-import Playback from '../components/common/playback'
 import ZoomA from '../components/zooms/zoom-a'
 import ZoomB from '../components/zooms/zoom-b'
 import ZoomC from '../components/zooms/zoom-c'
 import ZoomD from '../components/zooms/zoom-d'
-import useStreaming from '../hooks/use-streaming'
 import FragmentDF from '../components/text/fragment-df'
 
 const IndexPage = () => {
   const [ready, setReady] = useState(false)
   const [playing, setPlaying] = useState(true)
   const { font, video, image } = useMediaLoaded()
-  useStreaming('0iit6c3h-Qs', [
-    'streaming-1',
-    'streaming-2',
-    'streaming-3',
-    'streaming-4',
-  ], ready)
   const {
     current, currentSection, playback, active,
   } = useTracks()
@@ -227,7 +219,7 @@ const IndexPage = () => {
     [current, currentSection],
   )
 
-  console.log(current, currentSection)
+
   return (
     <ParallaxProvider>
       <Layout>
@@ -239,7 +231,7 @@ const IndexPage = () => {
         />
         <div>
           <Welcome />
-          <Streaming id="streaming-1" />
+          <Streaming src="streaming-1" play={ready} />
           <Intro />
           <Empty />
           <Cartography onClick={stamp} />
@@ -429,7 +421,7 @@ const IndexPage = () => {
           </Container>
           <NinoPanal pos="6" />
 
-          <Streaming id="streaming-2" />
+          <Streaming src="streaming-2" play={ready} />
 
           <Container>
             <Row>
@@ -602,7 +594,7 @@ const IndexPage = () => {
           </Container>
           <Cera pos="12" />
 
-          <Streaming id="streaming-3" />
+          <Streaming src="streaming-3" play={ready} />
 
           <Container>
             <Row>
@@ -789,7 +781,7 @@ const IndexPage = () => {
           </Container>
           <Tortolas pos="19" />
 
-          <Streaming id="streaming-4" />
+          <Streaming src="streaming-4" play={ready} />
 
           <Container>
             <Row>
