@@ -10,7 +10,7 @@ function CollectionA({ props }) {
         height: '40vw',
       }}
       src={[
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/1.+refiner%C3%ADa58.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/1.+refiner%C3%ADa58.jpg',
       ]}
       alt="Refinería"
     />

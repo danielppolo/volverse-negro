@@ -11,7 +11,7 @@ function FragmentCJ(props) {
   return (
     <Fragment pos="jjj" {...props}>
       <ImageStyled
-        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image7.jpg"
+        src="https://volverse-negro-daniel.s3.amazonaws.com/images/image7.jpg"
         alt="Propiedad Federal"
       />
     </Fragment>

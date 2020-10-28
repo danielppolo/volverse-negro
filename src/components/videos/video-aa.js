@@ -9,8 +9,8 @@ function VideoAA(props) {
         marginTop: '4rem',
       }}
       y={[-20, 20]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+01.compressed_2.compressed.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+01.compressed_2.compressed.mp4"
+      poster="https://volverse-negro-daniel.s3.amazonaws.com/stills/video-1.jpg"
+      src="https://volverse-negro-daniel.s3.amazonaws.com/videos/video-1.mp4"
       {...props}
     />
   )

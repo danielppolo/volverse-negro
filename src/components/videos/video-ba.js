@@ -9,8 +9,8 @@ function VideoBA(props) {
         alignSelf: 'flex-start',
       }}
       y={[-20, 20]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+25.compressed_1.compressed.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+25.compressed_1.compressed.mp4"
+      poster="https://volverse-negro-daniel.s3.amazonaws.com/stills/video-25.jpg"
+      src="https://volverse-negro-daniel.s3.amazonaws.com/videos/video-25.mp4"
       {...props}
     />
   )

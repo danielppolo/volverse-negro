@@ -8,9 +8,8 @@ const useFigures = (ready) => {
 
   useEffect(() => {
     const handleClick = (event) => {
-      if (event.target.id === 'cartography') return
-      if (['IMG', 'VIDEO', 'P'].includes(event.target.tagName)) return
-      
+      if (['IMG', 'VIDEO', 'P'].includes(event.target.tagName) && !event.target.id === 'cartography') return
+
       const figures = Array.from(document.querySelectorAll('.Figure.inactive'))
       const i = Math.floor(Math.random() * (figures.length - 1))
       const selected = figures[i]
@@ -23,6 +22,8 @@ const useFigures = (ready) => {
       selected.style.left = `${event.pageX}px`
       selected.style.top = `${event.pageY}px`
 
+      if (event.target.id === 'cartography') return
+      console.log(event.target.id)
       selected.style.animationName = 'fade'
       selected.style.animationDuration = '3s'
       selected.style.animationDelay = '3s'

@@ -19,14 +19,14 @@ function useTracks() {
   const [section, setSection] = useState(null)
   const [active, setActive] = useState(false)
   const sources = [
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-1-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-2-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-3-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-4-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-5-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-6-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-7-Narracion-MASTER.mp3',
-    'https://volverse-negro.s3.us-east-2.amazonaws.com/audio/Isla-8-Narracion-MASTER.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-1.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-2.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-3.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-4.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-5.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-6.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-7.mp3',
+    'https://volverse-negro-daniel.s3.amazonaws.com/tracks/track-8.mp3',
   ]
   useEffect(() => {
     if (typeof Audio !== 'undefined') {

@@ -11,8 +11,8 @@ function VideoAI(props) {
         width: '80%',
       }}
       y={[-40, 40]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+08.compressed_1.compressed.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+08.compressed_1.compressed.mp4"
+      poster="https://volverse-negro-daniel.s3.amazonaws.com/stills/video-8.jpg"
+      src="https://volverse-negro-daniel.s3.amazonaws.com/videos/video-8.mp4"
       {...props}
     />
   )

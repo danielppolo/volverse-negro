@@ -5,7 +5,7 @@ function CollectionÑ({ props }) {
   return (
     <Collection
       src={[
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/13.+fuego+refiner%C3%ADa8.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/13.+fuego+refiner%C3%ADa8.jpg',
       ]}
       alt="Fuego de refinería"
     />

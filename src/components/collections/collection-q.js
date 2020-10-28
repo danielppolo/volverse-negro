@@ -6,9 +6,9 @@ function CollectionQ({ props }) {
     <Collection
       alt="Campanario"
       src={[
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/16.+campanario20.jpg',
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/16.+campanario52.jpg',
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/16.+campanario51.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/16.+campanario20.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/16.+campanario52.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/16.+campanario51.jpg',
       ]}
     />
   )

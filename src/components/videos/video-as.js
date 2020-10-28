@@ -11,8 +11,8 @@ function VideoAS(props) {
         width: '90%',
       }}
       y={[-15, 15]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+18.compressed_1.compressed.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+18.compressed_1.compressed.mp4"
+      poster="https://volverse-negro-daniel.s3.amazonaws.com/stills/video-18.jpg"
+      src="https://volverse-negro-daniel.s3.amazonaws.com/videos/video-18.mp4"
       {...props}
     />
   )

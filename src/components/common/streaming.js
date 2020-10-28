@@ -19,9 +19,8 @@ function Streaming({ src, play }) {
       ref={video}
       loop
       preload="auto"
-      controls
-      src={`https://volverse-negro.s3.us-east-2.amazonaws.com/videos/${src}.mp4`}
-      poster={`https://volverse-negro.s3.us-east-2.amazonaws.com/posters/${src}.jpg`}
+      src={`https://volverse-negro-daniel.s3.amazonaws.com/videos/${src}.mp4`}
+      poster={`https://volverse-negro-daniel.s3.amazonaws.com/posters/${src}.jpg`}
     />
   )
 }

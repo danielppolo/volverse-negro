@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const ZoomStyled = styled.video`
@@ -22,7 +22,7 @@ function Zoom({ selector, src }) {
     const videoElement = video.current
     const anchor = document.querySelector(selector)
     const handleAnchorEnter = () => {
-      // videoElement.style.transform = `rotate(${(Math.floor(Math.random() * 20)) * (Math.random() > 0.5 ? -1 : 1)}deg) translate(-50%, -50%)`
+      videoElement.style.transform = `rotate(${(Math.floor(Math.random() * 20)) * (Math.random() > 0.5 ? -1 : 1)}deg) translate(-50%, -50%)`
       videoElement.classList.add('show')
       videoElement.play()
     }

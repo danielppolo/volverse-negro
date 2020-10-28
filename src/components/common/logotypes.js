@@ -23,11 +23,11 @@ const Container = styled.div`
 function Logotypes() {
   return (
     <Container>
-      <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logos+SecretariaCultura_Fonca-1.png" alt="FONCA" />
-      <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/FIC2020.png" alt="FIC" />
-      <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/LOGO+GTO+IEC.png" alt="Instituto Estatal de Cultura" />
-      <img src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logo+CEARG+.png" alt="CEARG" />
-      <img style={{ mixBlendMode: 'multiply' }} src="https://volverse-negro.s3.us-east-2.amazonaws.com/logotypes/logo+tojo2-2.jpg" alt="Teatro Ojo" />
+      <img src="https://volverse-negro-daniel.s3.amazonaws.com/logotypes/logos+SecretariaCultura_Fonca-1.png" alt="FONCA" />
+      <img src="https://volverse-negro-daniel.s3.amazonaws.com/logotypes/FIC2020.png" alt="FIC" />
+      <img src="https://volverse-negro-daniel.s3.amazonaws.com/logotypes/LOGO+GTO+IEC.png" alt="Instituto Estatal de Cultura" />
+      <img src="https://volverse-negro-daniel.s3.amazonaws.com/logotypes/logo+CEARG+.png" alt="CEARG" />
+      <img style={{ mixBlendMode: 'multiply' }} src="https://volverse-negro-daniel.s3.amazonaws.com/logotypes/logo+tojo2-2.jpg" alt="Teatro Ojo" />
     </Container>
   )
 }

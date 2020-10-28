@@ -10,8 +10,8 @@ function VideoBG(props) {
         width: '80%',
       }}
       y={[-40, 20]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/31.+Nuevo+(2)_1.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/31.+Nuevo+(2).mp4"
+      poster="https://volverse-negro-daniel.s3.amazonaws.com/stills/video-32.jpg"
+      src="https://volverse-negro-daniel.s3.amazonaws.com/videos/video-32.mp4"
       {...props}
     />
   )

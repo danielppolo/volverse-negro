@@ -10,7 +10,7 @@ function FragmentBG(props) {
   return (
     <Fragment pos="gg" {...props}>
       <ImageStyled
-        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image2.jpg"
+        src="https://volverse-negro-daniel.s3.amazonaws.com/images/image2.jpg"
         alt="Señora de la abejas"
       />
     </Fragment>

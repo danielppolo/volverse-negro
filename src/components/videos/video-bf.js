@@ -10,8 +10,8 @@ function VideoBF(props) {
         alignSelf: 'flex-start',
       }}
       y={[-30, 30]}
-      poster="https://volverse-negro.s3.us-east-2.amazonaws.com/posters/volversenegro+29.1+(bueno).compressed.jpg"
-      src="https://volverse-negro.s3.us-east-2.amazonaws.com/videos/volversenegro+29.1+(bueno).compressed.mp4"
+      poster="https://volverse-negro-daniel.s3.amazonaws.com/stills/video-29.5.jpg"
+      src="https://volverse-negro-daniel.s3.amazonaws.com/videos/video-29.5.mp4"
       {...props}
     />
   )

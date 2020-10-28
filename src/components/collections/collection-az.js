@@ -9,8 +9,8 @@ function CollectionAZ({ props }) {
         height: '40vw',
       }}
       src={[
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/25+Nueva.jpg',
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/25+Nueva1.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/25+Nueva.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/25+Nueva1.jpg',
       ]}
       alt="Nino de cera y flauta"
     />

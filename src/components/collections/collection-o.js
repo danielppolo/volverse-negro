@@ -6,8 +6,8 @@ function CollectionO({ props }) {
     <Collection
       alt="Cápsulas"
       src={[
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/14.+c%C3%A1psula27.jpg',
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/14.+c%C3%A1psula67.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/14.+c%C3%A1psula27.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/14.+c%C3%A1psula67.jpg',
       ]}
     />
   )

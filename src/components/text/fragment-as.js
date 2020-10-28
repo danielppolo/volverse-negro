@@ -9,7 +9,7 @@ const ImageStyled = styled.img`
 function FragmentAS(props) {
   return (
     <Fragment pos="s" {...props}>
-      <ImageStyled src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image1.png" alt="Gráfica de Valle Inquietante" />
+      <ImageStyled src="https://volverse-negro-daniel.s3.amazonaws.com/images/image1.png" alt="Gráfica de Valle Inquietante" />
     </Fragment>
   )
 }

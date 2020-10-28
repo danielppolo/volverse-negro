@@ -6,7 +6,7 @@ function FragmentBK(props) {
   return (
     <Fragment pos="kk" {...props}>
       <img
-        src="https://volverse-negro.s3.us-east-2.amazonaws.com/text-images/image5.jpg"
+        src="https://volverse-negro-daniel.s3.amazonaws.com/images/image5.jpg"
         alt="Señora de la abejas"
       />
     </Fragment>

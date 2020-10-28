@@ -992,14 +992,14 @@ const IndexPage = () => {
           <NinoFlauta pos="27" />
           <PajarosCupula pos="28" />
         </div>
-        <div>
+        {/* <div>
           <MusiciansIntro />
           <Musicians />
         </div>
         <div>
           <PostersIntro />
           <Posters />
-        </div>
+        </div> */}
         <Figures />
         <ZoomA
           onPlay={handleVideoPlay}

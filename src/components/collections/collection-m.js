@@ -5,7 +5,7 @@ function CollectionM({ props }) {
   return (
     <Collection
       src={[
-        'https://volverse-negro.s3.us-east-2.amazonaws.com/images/12.+ni%C3%B1oabeja61.jpg',
+        'https://volverse-negro-daniel.s3.amazonaws.com/images/12.+ni%C3%B1oabeja61.jpg',
       ]}
       alt="Niño abeja"
     />
